@@ -1,0 +1,19 @@
+.multiBox{
+  font-size: 1.2rem;
+  font-weight: 600 !important;
+  color: white;
+  display: grid;
+  justify-items: center;
+  margin-top: 2.5rem;
+
+  &__list{
+    display: flex;
+    list-style: none;
+
+    &__item{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
