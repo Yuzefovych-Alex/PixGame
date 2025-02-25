@@ -18,21 +18,39 @@ $muibox-fon: #38214E;
         background-color: $muibox-fon;
         width: 15rem;
         height: 27rem;
-        margin-left: 0.7rem;
-        margin-right: 0.7rem;
+        margin: 0.7rem;
         border-radius: 1rem;
-        margin-top: 0.7rem;
-        margin-bottom: 0.7rem;
         overflow: hidden;
-        transition: all 1s ease-in-out;
+        position: relative;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-        &:hover {
-          position: relative;
-          bottom: 0.7rem;
-          transition: all 1s ease-in-out;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 90%;
+          height: 25px;
+          background: rgba(255, 255, 255, 0.4);
+          bottom: -12px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 50%;
+          filter: blur(15px);
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
 
-        &__header {
+        &:hover {
+          transform: translateY(-25px);
+          box-shadow: 0px 20px 30px rgba(255, 255, 255, 0.15);
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+
+
+
+      &__header {
           padding-top: 0.7rem;
           padding-bottom: 0.5rem;
           font-size: 1.2rem;
@@ -53,7 +71,7 @@ $muibox-fon: #38214E;
             transition: transform 0.5s ease-in-out;
           }
         }
-        
+
         &:hover &__contaner img {
           transform: scale(1.2);
         }
