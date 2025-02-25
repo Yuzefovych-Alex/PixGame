@@ -39,7 +39,16 @@ $color-text: #6218AA;
       font-size: 1.2rem;
       background-color: white;
       font-weight: 600;
-      border-radius: 2rem;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      border: solid 3px $color-text;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &__login:hover{
+      background-color: $color-text;
+      color: white;
+      transition: all 0.5s ease-in-out;
     }
   }
 }

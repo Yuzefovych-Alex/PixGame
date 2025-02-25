@@ -1,50 +1,140 @@
 $muibox-fon: #38214E;
 
-.muiBox{
+.muiBox {
   margin-top: 2rem;
 
-  &__contaner{
+  &__contaner {
     display: grid;
     justify-items: center;
 
-    &__list{
+    &__list {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       list-style: none;
       margin-top: 1rem;
       margin-bottom: 1rem;
 
-      &__item{
+      &__item {
         background-color: $muibox-fon;
         width: 15rem;
-        height: 25rem;
+        height: 27rem;
         margin-left: 0.7rem;
         margin-right: 0.7rem;
         border-radius: 1rem;
         margin-top: 0.7rem;
         margin-bottom: 0.7rem;
         overflow: hidden;
+        transition: all 1s ease-in-out;
 
-        &__contaner{
+        &:hover {
+          position: relative;
+          bottom: 0.7rem;
+          transition: all 1s ease-in-out;
+        }
+
+        &__header {
+          padding-top: 0.7rem;
+          padding-bottom: 0.5rem;
+          font-size: 1.2rem;
+
+          &__title {
+            color: white;
+            text-align: center;
+          }
+        }
+
+        &__contaner {
           position: relative;
           width: 100%;
           height: 70%;
+          overflow: hidden;
 
-
+          img {
+            transition: transform 0.5s ease-in-out;
+          }
+        }
+        
+        &:hover &__contaner img {
+          transform: scale(1.2);
         }
 
         &__dataGood {
           color: white;
           height: 30%;
+          margin-top: 0.5rem;
+          margin-left: 0.3rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
 
-          &__title{
-            text-align: center;
+          &__contaner {
+            &__data {
+              display: flex;
+
+              &__item {
+                margin-left: 0.1rem;
+                margin-right: 0.1rem;
+                width: 1rem;
+                height: 1rem;
+                background-color: white;
+              }
+
+              &__date {
+                margin-left: 1rem;
+                position: relative;
+                bottom: 0.1rem;
+              }
+            }
+
+            &__boxPrice {
+              display: flex;
+              margin-left: 0.3rem;
+              margin-top: 0.5rem;
+
+              &__sell {
+                &__title {
+                  color: #A954FC;
+                  position: relative;
+                  display: inline-block;
+
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0.1rem;
+                    bottom: 0.5rem;
+                    width: 100%;
+                    height: 1px;
+                    background-color: white;
+                    transform: rotate(-30deg);
+                    transform-origin: left bottom;
+                  }
+                }
+              }
+
+              &__price {
+                margin-left: 0.5rem;
+              }
+            }
           }
 
+          &__boxSell {
+            margin-top: 0.5rem;
+            margin-left: 3rem;
+            display: block;
+            width: 100%;
+            height: 2.5rem;
+            background-color: white;
+            color: $muibox-fon;
+            text-align: center;
+            line-height: 2.5rem;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 1rem 50%);
 
+            &__title {
+              position: relative;
+              right: 1rem;
+            }
+          }
         }
       }
     }
   }
 }
-

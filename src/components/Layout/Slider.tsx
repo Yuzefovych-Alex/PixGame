@@ -21,7 +21,18 @@ const Slider = () => {
                     <li className={styles.slider__contaner__list__item}>
                         <h3 className={styles.slider__contaner__list__item__sell}>90%</h3>
                     </li>
+                    <li className={styles.slider__contaner__list__item}>
+                        <h3 className={styles.slider__contaner__list__item__sell}>90%</h3>
+                    </li>
                 </ul>
+                <div className={styles.slider__contander__buttons}>
+                    <ul className={styles.slider__contaner__buttons__list}>
+                        <li className={styles.slider__contaner__buttons__list__item}></li>
+                        <li className={styles.slider__contaner__buttons__list__item}></li>
+                        <li className={styles.slider__contaner__buttons__list__item}></li>
+                        <li className={styles.slider__contaner__buttons__list__item}></li>
+                    </ul>
+                </div>
             </div>
         </div>
     );
