@@ -1,0 +1,35 @@
+$color-block: #38214E;
+$color-button: #703BA5;
+
+.singIn{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  &__contaner{
+    background-color: $color-block;
+    padding: 10rem;
+
+
+    &__email, &__password{
+      display: flex;
+      padding-right: 16rem;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      border-radius: 1rem;
+      border: solid 1px white;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      outline: none;
+      padding-left: 1rem;
+    }
+
+    &__button{
+      background-color: $color-button;
+      border: none;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 1rem;  
+    }
+  }
+}

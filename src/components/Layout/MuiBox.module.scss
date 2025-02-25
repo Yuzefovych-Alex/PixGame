@@ -18,7 +18,7 @@ $muibox-fon: #38214E;
         background-color: $muibox-fon;
         width: 15rem;
         height: 27rem;
-        margin: 0.7rem;
+        margin: 1rem;
         border-radius: 1rem;
         overflow: hidden;
         position: relative;
@@ -40,7 +40,7 @@ $muibox-fon: #38214E;
         }
 
         &:hover {
-          transform: translateY(-25px);
+          transform: translateY(-15px);
           box-shadow: 0px 20px 30px rgba(255, 255, 255, 0.15);
         }
 
