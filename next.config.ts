@@ -10,9 +10,10 @@ export default nextConfig;
 /** @type {import('next').NextConfig} */
 const NextConfig = {
     output: "export",
-    basePath: "/PixGame", // замініть "my-next-app" на назву репозиторію
+    basePath: "/PixGame", 
+    assetPrefix: "/PixGame/", 
     images: {
-        unoptimized: true, // оскільки GitHub Pages не підтримує image optimization
+        unoptimized: true,
     },
 };
 
