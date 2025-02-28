@@ -1,4 +1,8 @@
-.multiBox{
+$color-text: #A954FC;
+$color-fon: #1b1422;
+
+
+.multiBox {
   font-size: 1.2rem;
   font-weight: 600 !important;
   color: white;
@@ -6,13 +10,29 @@
   justify-items: center;
   margin-top: 2.5rem;
 
-  &__list{
+  &__list {
     display: flex;
     list-style: none;
 
-    &__item{
+    &__item {
       margin-left: 1rem;
       margin-right: 1rem;
+      border-bottom: solid 2px $color-fon;
+      transition: all 0.5s;
+
+      &__link {
+        text-decoration: none;
+        border-bottom: solid 2px $color-fon;
+        transition: all 0.5s;
+        color: white;
+
+        &:hover {
+          border-bottom: solid 2px $color-text;
+          color: $color-text;
+          transition: all 0.5s;
+        }
+
+      }
     }
   }
 }
