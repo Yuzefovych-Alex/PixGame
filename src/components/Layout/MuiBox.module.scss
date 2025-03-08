@@ -9,19 +9,20 @@ $muibox-fon: #38214E;
 
     &__list {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       list-style: none;
-      margin-top: 1rem;
+      margin-top: 2rem;
       margin-bottom: 1rem;
 
       &__item {
         background-color: $muibox-fon;
-        width: 15rem;
-        height: 27rem;
+        width: 16.6rem;
+        height: 27.7rem;
         margin: 1rem;
-        border-radius: 1rem;
+        border-radius: 1rem 1rem 0rem 1rem;
         overflow: hidden;
         position: relative;
+        box-shadow: 0 0 5px 0.3px rgba(255, 255, 255, 0.5);;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
         &::after {
@@ -91,8 +92,8 @@ $muibox-fon: #38214E;
               &__item {
                 margin-left: 0.1rem;
                 margin-right: 0.1rem;
-                width: 1rem;
-                height: 1rem;
+                width: 0.5rem;
+                height: 0.5rem;
                 background-color: white;
               }
 
@@ -139,7 +140,7 @@ $muibox-fon: #38214E;
             margin-left: 3rem;
             display: block;
             width: 100%;
-            height: 2.5rem;
+            height: 4rem;
             background-color: white;
             color: $muibox-fon;
             text-align: center;

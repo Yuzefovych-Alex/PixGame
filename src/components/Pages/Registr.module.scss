@@ -5,11 +5,20 @@ $color-button: #703BA5;
   display: grid;
   place-items: center;
   height: 100vh;
+  margin-top: 8rem;
+  transform: translateY(-8rem);
 
   &__contaner{
     background-color: $color-block;
     padding: 10rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 1px white;
 
+    &__title{
+      color: white;
+      text-align: center;
+      font-size: 1.8rem;
+    }
 
     &__email, &__password{
       display: flex;
@@ -28,8 +37,12 @@ $color-button: #703BA5;
       background-color: $color-button;
       border: none;
       color: white;
-      padding: 1.5rem;
+      padding: 1rem;
       border-radius: 1rem;  
+      font-size: 1rem;
+      font-weight: 600 !important;
+      display: block;
+      justify-items: center;
     }
   }
 }

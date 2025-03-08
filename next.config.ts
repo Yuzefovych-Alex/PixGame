@@ -1,14 +1,14 @@
-/*
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /!* config options here *!/
+  /* config options here */
 };
 
 export default nextConfig;
-*/
-/** @type {import('next').NextConfig} */
-const NextConfig = {
+
+///** @type {import('next').NextConfig} */
+/*const NextConfig = {
     output: "export",
     basePath: "/PixGame", // замініть "my-next-app" на назву репозиторію
     images: {
@@ -16,4 +16,4 @@ const NextConfig = {
     },
 };
 
-module.exports = NextConfig;
+module.exports = NextConfig;*/

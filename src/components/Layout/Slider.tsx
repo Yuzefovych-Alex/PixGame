@@ -7,22 +7,34 @@ const Slider = () => {
             <div className={styles.slider__contaner}>
                 <ul className={styles.slider__contaner__list}>
                     <li className={styles.slider__contaner__list__item}>
-                        <h3 className={styles.slider__contaner__list__item__sell}>50%</h3>
+                        <div className={styles.slider__contaner__list__item__rating}>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                        </div>
+                        <h3 className={styles.slider__contaner__list__item__sell}>-50%</h3>
                     </li>
                     <li className={styles.slider__contaner__list__item}>
-                        <h3 className={styles.slider__contaner__list__item__sell}>60%</h3>
+                        <div className={styles.slider__contaner__list__item__rating}>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                        </div>
+                        <h3 className={styles.slider__contaner__list__item__sell}>-60%</h3>
                     </li>
                     <li className={styles.slider__contaner__list__item}>
-                        <h3 className={styles.slider__contaner__list__item__sell}>70%</h3>
-                    </li>
-                    <li className={styles.slider__contaner__list__item}>
-                        <h3 className={styles.slider__contaner__list__item__sell}>80%</h3>
-                    </li>
-                    <li className={styles.slider__contaner__list__item}>
-                        <h3 className={styles.slider__contaner__list__item__sell}>90%</h3>
-                    </li>
-                    <li className={styles.slider__contaner__list__item}>
-                        <h3 className={styles.slider__contaner__list__item__sell}>90%</h3>
+                        <div className={styles.slider__contaner__list__item__rating}>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                        </div>
+                        <h3 className={styles.slider__contaner__list__item__sell}>-70%</h3>
                     </li>
                 </ul>
                 <div className={styles.slider__contander__buttons}>
