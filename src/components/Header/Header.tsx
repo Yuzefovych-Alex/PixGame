@@ -1,4 +1,4 @@
-import styles from "@/components/Layout/Header.module.scss";
+import styles from "@/components/Header/Header.module.scss";
 import Image from "next/image";
 
 const Header = () => {

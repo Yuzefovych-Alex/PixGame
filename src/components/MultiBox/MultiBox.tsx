@@ -1,4 +1,4 @@
-import styles from "@/components/Layout/MultiBox.module.scss";
+import styles from "@/components/MultiBox/MultiBox.module.scss";
 import Link from "next/link";
 
 const MultiBox = () => {

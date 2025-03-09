@@ -1,4 +1,4 @@
-import styles from "@/components/Layout/Slider.module.scss";
+import styles from "@/components/Slider/Slider.module.scss";
 //import Image from "next/image";
 
 const Slider = () => {

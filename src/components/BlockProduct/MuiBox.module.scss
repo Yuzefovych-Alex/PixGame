@@ -1,0 +1,20 @@
+$muibox-fon: #38214E;
+
+.muiBox {
+  margin-top: 2rem;
+
+  &__contaner {
+    display: grid;
+    justify-items: center;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      list-style: none;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  
+}

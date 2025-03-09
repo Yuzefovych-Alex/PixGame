@@ -1,4 +1,4 @@
-import styles from "@/components/Layout/Search.module.scss";
+import styles from "@/components/Search/Search.module.scss";
 
 const Search = () => {
     return (
