@@ -1,0 +1,43 @@
+$fon-color: #38214E;
+$fon-border: #A954FC;
+
+.blockData{
+    margin-top: 2rem;
+
+    &__contaner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        &__header{
+            margin-right: 2rem;
+
+            &__image{
+                background-color: white;
+                width: 16.8rem;
+                height: 25.5rem;
+                border-radius: 30px 30px 62px 0px;
+            }
+
+            &__section{
+                
+            }
+
+            &__data{
+                background-color: $fon-color;
+                width: 16.8rem;
+                height: 15.1rem;
+                border-radius: 0px 60px 30px 30px;
+            }
+        }
+
+        &__main{
+            background-color: white;
+            width: 33.5rem;
+            height: 40.7rem;
+            border-radius: 0px 0px 5px 10px;
+            
+        }
+    }
+}
