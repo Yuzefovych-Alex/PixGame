@@ -1,7 +1,7 @@
 $fon-color: #38214E;
 $textBorder-color: #A954FC;
 $text-sell: rgba(27, 20, 34, 0.4);
-
+$text-sell-bottom: rgba(56, 33, 78, 0.2);
 
 .blockData{
     margin-top: 2rem;
@@ -84,7 +84,6 @@ $text-sell: rgba(27, 20, 34, 0.4);
                     background: linear-gradient(to right, $fon-color, white);
                     color: white;
                     padding-top: 0.3rem;
-                    padding-bottom: 0.3rem;
                     padding-left: 1rem;
                     border-radius: 0.3rem;
 
@@ -118,6 +117,35 @@ $text-sell: rgba(27, 20, 34, 0.4);
                         color: $text-sell;
                         position: relative;
                         top: 0.2rem;
+                    }
+                }
+            }
+
+            &__listProductStore{
+                margin-top: 2.5rem;
+                margin-right: 2rem;
+                margin-left: 1rem;
+
+                &__itemList{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    padding-left: 2rem;
+                    color: $fon-color;
+                    border-bottom: solid 2px $text-sell-bottom;
+                    padding-bottom: 0.2rem;
+                    margin-bottom: 0.7rem;
+
+                    &__button{
+                        font-size: 0.8rem;
+                        color: white;
+                        background-color: $textBorder-color;
+                        width: 2.9rem;
+                        height: 1.2rem;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center; 
+                        justify-content: center; 
+                        margin-left: 74%;
                     }
                 }
             }

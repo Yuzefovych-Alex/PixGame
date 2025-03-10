@@ -49,6 +49,24 @@ const BlockDataGame = () => {
                                 <div className={styles.blockData__contaner__main__listStore__item__sell}></div>
                             </li>
                         </ul>
+                        <div className={styles.blockData__contaner__main__listProductStore}>
+                            <ul className={styles.blockData__contaner__main__listProductStore__itemList}>
+                                <li className={styles.blockData__contaner__main__listProductStore__itemList__item}>
+                                    Epic Game
+                                </li>
+                                <div className={styles.blockData__contaner__main__listProductStore__itemList__button}>
+                                    Buy
+                                </div>
+                            </ul>
+                            <ul className={styles.blockData__contaner__main__listProductStore__itemList}>
+                                <li className={styles.blockData__contaner__main__listProductStore__itemList__item}>
+                                    STEAM
+                                </li>
+                                <div className={styles.blockData__contaner__main__listProductStore__itemList__button}>
+                                    Buy
+                                </div>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
