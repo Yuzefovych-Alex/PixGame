@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "@/components/BlockDataGame/BlockGame.module.scss";
 
 const BlockDataGame = () => {
@@ -7,10 +8,26 @@ const BlockDataGame = () => {
                 <div className={styles.blockData__contaner}>
                     <div className={styles.blockData__contaner__header}>
                         <div className={styles.blockData__contaner__header__image}>
-                            
+                            <Image className={styles.blockData__contaner__header__image__photo} src="" alt="asf" fill/>
                         </div>
                         <div className={styles.blockData__contaner__header__section}></div>
-                        <div className={styles.blockData__contaner__header__data}></div>
+                        <div className={styles.blockData__contaner__header__data}>
+                            <h3>The Last of Us Part II Remaster</h3>
+                            <div className={styles.blockData__contaner__header__data__dataGame}>
+                                <div className={styles.blockData__contaner__header__data__dataGame__os}>
+
+                                </div>
+                                <div className={styles.blockData__contaner__header__data__dataGame__date}>10.02.25</div>
+                            </div>
+                            <div className={styles.blockData__contaner__header__data__developer}>
+                                <h3 className={styles.blockData__contaner__header__data__developer__title}>Developer:</h3>
+                                <p className={styles.blockData__contaner__header__data__developer__content}>Naughty Dog LLC, Nixxes Software, Iron Galaxy Studios</p>
+                            </div>
+                            <div className={styles.blockData__contaner__header__data__publisher}>
+                                <h3 className={styles.blockData__contaner__header__data__publisher__title}>Publisher:</h3>
+                                <p className={styles.blockData__contaner__header__data__publisher__content}>PlayStation Publishing LLC</p>
+                            </div>
+                        </div>
                     </div>
                     <div className={styles.blockData__contaner__main}>
                         <h3 className={styles.blockData__contaner__main__title}>Description</h3>

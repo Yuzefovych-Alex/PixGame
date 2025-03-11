@@ -1,6 +1,14 @@
 $muibox-fon: #38214E;
 $color-shadow: #A954FC;
 
+$default-cart-width: 16.6rem;
+$default-cart-height: 27.7rem;
+
+@mixin block-size-cart($width: $default-cart-width, $height: $default-cart-height){
+  width: $width;
+  height: $height;
+}
+
 .cart__item {
     background-color: $muibox-fon;
     width: 16.6rem;

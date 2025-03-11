@@ -1,0 +1,14 @@
+.section{
+    display: grid;
+    justify-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    &__contaner{
+        margin-left: 0.8rem;
+        width: 32%;
+        height: 0.3rem;
+        background-color: white;
+        border-radius: 1rem;
+    }
+}
