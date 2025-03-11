@@ -4,15 +4,20 @@ $color-shadow: #A954FC;
 $default-cart-width: 16.6rem;
 $default-cart-height: 27.7rem;
 
+
 @mixin block-size-cart($width: $default-cart-width, $height: $default-cart-height){
   width: $width;
   height: $height;
+
+  &__header{
+    font-size: 1rem;
+  }
+  
 }
 
 .cart__item {
-    background-color: $muibox-fon;
-    width: 16.6rem;
-    height: 27.7rem;
+  background-color: $muibox-fon;
+  @include block-size-cart(12.5rem, 20.8rem);
     margin: 1rem;
     overflow: hidden;
     position: relative;
@@ -42,7 +47,6 @@ $default-cart-height: 27.7rem;
     &:hover::after {
       opacity: 1;
     }
-
 
 
   &__header {
