@@ -3,27 +3,28 @@ $color-shadow: #A954FC;
 
 $default-cart-width: 16.6rem;
 $default-cart-height: 27.7rem;
+$default-cart-header-font-size: 1.2rem;
 
 
-@mixin block-size-cart($width: $default-cart-width, $height: $default-cart-height){
+@mixin block-size-cart($width: $default-cart-width, $height: $default-cart-height, $size: $default-cart-header-font-size) {
   width: $width;
   height: $height;
 
-  &__header{
-    font-size: 1rem;
+  &__header {
+    font-size: $size;
   }
-  
 }
 
 .cart__item {
   background-color: $muibox-fon;
-  @include block-size-cart(12.5rem, 20.8rem);
+  @include block-size-cart();
     margin: 1rem;
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 5px 0.3px rgba(255, 255, 255, 0.5);;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
+    
     &::after {
       content: "";
       position: absolute;
@@ -50,11 +51,11 @@ $default-cart-height: 27.7rem;
 
 
   &__header {
-      padding-top: 0.7rem;
-      padding-bottom: 0.5rem;
-      font-size: 1.2rem;
-
-      &__title {
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    
+    &__title {
         color: white;
         text-align: center;
       }

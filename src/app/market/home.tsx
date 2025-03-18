@@ -1,22 +1,19 @@
 import Search from "@/components/Search/Search";
 import MultiBox from "@/components/MultiBox/MultiBox";
-import Slider from "@/components/Slider/Slider";
 import MuiBox from "@/components/BlockProduct/MuiBox";
-import CartsSell from "@/components/Carts/Store/CartsSell"
-import Carts from "@/components/Carts/Store/Carts";
-import Footer from "@/components/Footer/Footer";
+import Carts from "@/components/Carts/Market/Carts";
+import ProgramBlock from "@/components/ProgramBlock/ProgramBlock";
+import Event from "@/components/Event/Event";
+import SectionProduct from "@/components/SectionProduct/SectionProduct";
 
-const StoreHome = () => {
+const MarketHome = () => {
     return (
         <>
             <Search/>
             <MultiBox/>
-            <Slider/>
-            <MuiBox>
-                <CartsSell/>
-                <CartsSell/>
-                <CartsSell/>
-            </MuiBox>
+            <ProgramBlock/>
+            <Event/>
+            <SectionProduct/>
             <MuiBox>
                 <Carts/>
                 <Carts/>
@@ -27,10 +24,11 @@ const StoreHome = () => {
                 <Carts/>
                 <Carts/>
                 <Carts/>
+                <Carts/>
             </MuiBox>
-            <Footer/>
+            
         </>
     );
 };
 
-export default StoreHome;
+export default MarketHome;

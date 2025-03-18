@@ -1,0 +1,50 @@
+$color-block: #38214E;
+$color-image: #c4c4c4;
+
+.event{
+    margin-top: 2rem;
+
+    &__contaner{
+        display: grid;
+        justify-items: center;
+        
+        &__title{
+            margin-bottom: 1rem;
+
+            &__text{
+                color: white;
+            }
+            &__section{
+                background-color: white;
+                width: 60rem;
+                height: 2px;
+            }
+        }
+
+
+        &__list{
+            display: flex;
+            list-style: none;
+
+            &__item{
+                margin-right: 1.2rem;
+                margin-left: 1.2rem;
+
+                &__box{
+                    background-color: $color-block;
+                    width: 20.8rem;
+                    height: 12.5rem;
+                    display: grid;
+                    justify-items: center;
+
+                    &__image{
+                        background-color: $color-image;
+                        height: 12.5rem;
+                        width: 16rem;
+
+                    }
+                }
+            }
+        }
+    }
+}

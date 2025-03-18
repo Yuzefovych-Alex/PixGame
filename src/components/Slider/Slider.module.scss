@@ -1,8 +1,10 @@
 $fon-button: #4E189A;
 $color-shadow: #A954FC;
 $color-block: #C4C4C4;
+$color-boxshadow: rgba(0, 0, 0, 0.25);
 
 .slider{
+  margin-bottom: 3rem;
   &__contaner{
     display: grid;
     justify-items: center;
@@ -15,7 +17,7 @@ $color-block: #C4C4C4;
       &__item{
         background-color: $color-block;
         width: 21.6rem;
-        height: 32.5rem;
+        height: 39rem;
         margin-right: 1rem;
         margin-left: 1rem ;
         border-radius: 1.5rem;
@@ -26,18 +28,19 @@ $color-block: #C4C4C4;
         color: white;
 
         &__rating{
-          transform: translate(-5rem, -5rem);
+          transform: translate(-6rem, -7.5rem);
 
           &__item{
             color: $color-shadow;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
           }
         }
 
         &__sell{
           position: relative;
-          top: -3.7rem;
-          font-size: 3rem;
+          top: -6.7rem;
+          font-size: 4rem;
+          text-shadow: 0px 0px 20px 5px $color-boxshadow;
         }
 
         &__image{

@@ -1,0 +1,19 @@
+.sectionProduct{
+    display: grid;
+    justify-items: center;
+    transform: translateY(3.5rem);
+
+    &__contaner{
+
+        &__title{
+            color: white;
+        }
+
+        &__section{
+            background-color: white;
+            width: 60rem;
+            height: 2px;
+            border-radius: 5rem;
+        }
+    }
+}
