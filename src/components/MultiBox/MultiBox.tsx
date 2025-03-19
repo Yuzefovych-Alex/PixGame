@@ -12,13 +12,13 @@ const MultiBox = () => {
                     <Link href="/dfff" className={styles.multiBox__list__item__link}>For you</Link>
                 </li>
                 <li className={styles.multiBox__list__item}>
-                    <Link href="/adsf" className={styles.multiBox__list__item__link}><h3>Hot</h3></Link>
+                    <Link href="/adsf" className={styles.multiBox__list__item__link}>Hot</Link>
                 </li>
                 <li className={styles.multiBox__list__item}>
-                    <Link href="/adf" className={styles.multiBox__list__item__link}><h3>Best</h3></Link>
+                    <Link href="/adf" className={styles.multiBox__list__item__link}>Best</Link>
                 </li>
                 <li className={styles.multiBox__list__item}>
-                    <Link href="/jk" className={styles.multiBox__list__item__link}><h3>More</h3></Link>
+                    <Link href="/jk" className={styles.multiBox__list__item__link}>More</Link>
                 </li>
             </ul>
         </div>

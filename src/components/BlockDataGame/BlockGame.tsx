@@ -12,10 +12,11 @@ const BlockDataGame = () => {
                         </div>
                         <div className={styles.blockData__contaner__header__section}></div>
                         <div className={styles.blockData__contaner__header__data}>
-                            <h3>The Last of Us Part II Remaster</h3>
+                            <h3 className={styles.blockData__contaner__header__data__nameGame}>The Last of Us Part II Remaster</h3>
                             <div className={styles.blockData__contaner__header__data__dataGame}>
                                 <div className={styles.blockData__contaner__header__data__dataGame__os}>
-
+                                    <div className={styles.blockData__contaner__header__data__dataGame__os__image}></div>
+                                    <div className={styles.blockData__contaner__header__data__dataGame__os__image}></div>
                                 </div>
                                 <div className={styles.blockData__contaner__header__data__dataGame__date}>10.02.25</div>
                             </div>

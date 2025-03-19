@@ -1,7 +1,7 @@
 $fon-button: #4E189A;
 $color-shadow: #A954FC;
 $color-block: #C4C4C4;
-$color-boxshadow: rgba(0, 0, 0, 0.25);
+$color-boxshadow: rgba(0, 0, 0, 0.3);
 
 .slider{
   margin-bottom: 3rem;
@@ -12,7 +12,7 @@ $color-boxshadow: rgba(0, 0, 0, 0.25);
     &__list{
       display: flex;
       list-style: none;
-      margin-top: 4rem;
+      margin-top: 2rem;
 
       &__item{
         background-color: $color-block;
@@ -33,6 +33,7 @@ $color-boxshadow: rgba(0, 0, 0, 0.25);
           &__item{
             color: $color-shadow;
             font-size: 1.5rem;
+            text-shadow: 0px 3px 5px $color-boxshadow;
           }
         }
 
@@ -40,7 +41,7 @@ $color-boxshadow: rgba(0, 0, 0, 0.25);
           position: relative;
           top: -6.7rem;
           font-size: 4rem;
-          text-shadow: 0px 0px 20px 5px $color-boxshadow;
+          text-shadow: 0px 3px 5px $color-boxshadow;
         }
 
         &__image{
