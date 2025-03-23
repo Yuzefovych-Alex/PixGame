@@ -9,7 +9,7 @@ $muibox-fon: #38214E;
 
     &__list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(var(--size-columns-muibox, 3), 1fr);
       list-style: none;
       margin-top: 2rem;
       margin-bottom: 1rem;

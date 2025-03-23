@@ -4,7 +4,6 @@ import Slider from "@/components/Slider/Slider";
 import MuiBox from "@/components/BlockProduct/MuiBox";
 import CartsSell from "@/components/Carts/Store/CartsSell"
 import Carts from "@/components/Carts/Store/Carts";
-import Footer from "@/components/Footer/Footer";
 
 const StoreHome = () => {
     return (
@@ -12,12 +11,12 @@ const StoreHome = () => {
             <Search/>
             <MultiBox/>
             <Slider/>
-            <MuiBox>
+            <MuiBox numberBlocks={3}>
                 <CartsSell/>
                 <CartsSell/>
                 <CartsSell/>
             </MuiBox>
-            <MuiBox>
+            <MuiBox numberBlocks={3}>
                 <Carts/>
                 <Carts/>
                 <Carts/>
@@ -28,7 +27,6 @@ const StoreHome = () => {
                 <Carts/>
                 <Carts/>
             </MuiBox>
-            <Footer/>
         </>
     );
 };

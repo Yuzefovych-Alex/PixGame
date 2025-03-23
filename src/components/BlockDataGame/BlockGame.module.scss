@@ -2,6 +2,7 @@ $fon-color: #38214E;
 $textBorder-color: #A954FC;
 $text-sell: rgba(27, 20, 34, 0.4);
 $text-sell-bottom: rgba(56, 33, 78, 0.2);
+$title-color: rgba(0, 0, 0, 0.5);
 
 .blockData{
     margin-top: 2rem;
@@ -11,193 +12,259 @@ $text-sell-bottom: rgba(56, 33, 78, 0.2);
         justify-content: center;
         align-items: center;
 
+        &__leftBlock{
+            &__header{
+                margin-right: 2rem;
+                color: white;
 
-        &__header{
-            margin-right: 2rem;
-            color: white;
-
-            &__image{
-                background-color: white;
-                width: 16.8rem;
-                height: 25.5rem;
-                border-radius: 30px 30px 62px 0px;
-            }
-
-            &__section{
-                background-color: white;
-                width: 15rem;
-                height: 3px;
-            }
-
-            &__data{
-                background-color: $fon-color;
-                width: 16.8rem;
-                height: 15.1rem;
-                border-radius: 0px 60px 30px 30px;
-                padding: 1rem;
-
-                &__nameGame{
-                    font-size: 1.3rem;
-
-                }
-
-                &__developer{
-                    display: flex;
-
-                    &__title{
-                        color: $textBorder-color;
-                    }
-                }
-
-                &__publisher{
-                    display: flex;
-
-                    &__title{
-                        color: $textBorder-color;
-                    }
-                }
-
-                &__dataGame{
-                    display: flex;
-                    margin-top: 0.5rem;
-                    margin-bottom: 0.5rem;
-
-                    &__os{
+                &__image{
+                    background-color: white;
+                    position: relative;
+                    width: 16.8rem;
+                    height: 25.5rem;
+                    border-radius: 30px 30px 62px 0px;
+                    overflow: hidden;
+                    
+                    &__rating{
+                        z-index: 6;
                         display: flex;
-                        margin-right: 0.5rem;
+                        position: relative;
+                        top: 0.5rem;
+                        left: 1rem;
+                        background-color: white;
+                        width: 6rem;
+                        height: 1.7rem;
+                        border-radius: 0.5rem;
 
-                        &__image{
-                            background-color: white;
-                            width: 1.2rem;
-                            height: 1.2rem;
-                            margin: 0.1rem;
+                        &__item{
+                            font-size: 1.5rem;
+                            color: $textBorder-color;
+                            text-shadow: 0px 3px 5px $title-color;
+                            position: relative;
+                            bottom: 0.2rem;
                         }
                     }
 
-                    &__date{
+                    &__photo{
+                        object-fit: cover;
+                    }
+
+                    &__sell{
+                        color: $fon-color;
+                        background-color: white;
+                        width: 7rem;
+                        height: 3.5rem;
                         position: relative;
-                        top: 0.3rem;
+                        top: 80%;
+                        display: grid;
+                        justify-items: center;
+                        align-items: center;
+                        clip-path: polygon(0 0, 100% 0, 75% 50%, 75% 50%, 100% 100%, 0 100%);
+
+
+                        &__title{
+                            position: relative;
+                            right: 0.9rem;
+                            font-size: 1.4rem;
+                        }
                     }
                 }
 
+                &__section{
+                    display: flex;
+                    
+
+                    &__line{
+                        background-color: white;
+                        width: 14rem;
+                        height: 3px;
+                    }
+                    
+                    &__cube{
+                        background-color: white;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(45deg);
+                        position: relative;
+                        bottom: 0.4rem;
+                        right: 0.8rem;
+                    }
+                }
+
+                &__data{
+                    margin-top: -1rem;
+                    background-color: $fon-color;
+                    width: 16.8rem;
+                    height: 15.1rem;
+                    border-radius: 0px 60px 30px 30px;
+                    padding: 1rem;
+
+                    &__nameGame{
+                        font-size: 1.3rem;
+
+                    }
+
+                    &__developer{
+                        display: flex;
+
+                        &__title{
+                            color: $textBorder-color;
+                        }
+                    }
+
+                    &__publisher{
+                        display: flex;
+
+                        &__title{
+                            color: $textBorder-color;
+                        }
+                    }
+
+                    &__dataGame{
+                        display: flex;
+                        margin-top: 0.5rem;
+                        margin-bottom: 0.5rem;
+
+                        &__os{
+                            display: flex;
+                            margin-right: 0.5rem;
+
+                            &__image{
+                                background-color: white;
+                                width: 1.2rem;
+                                height: 1.2rem;
+                                margin: 0.1rem;
+                            }
+                        }
+
+                        &__date{
+                            position: relative;
+                            top: 0.3rem;
+                        }
+                    }
+
+                }
             }
         }
 
-        &__main{
-                background-color: white;
-                width: 33.5rem;
-                height: 40.7rem;
-                border-radius: 0px 0px 5px 10px;
-                
-                &__title{
-                    padding-left: 1rem;
-                    padding-top: 1rem;
-                    padding-bottom: 0.5rem;
+
+        &__rightBlock{
+            &__main{
+                    background-color: white;
+                    width: 33.5rem;
+                    height: 40.7rem;
+                    border-radius: 0px 0px 5px 10px;
                     
-                }
-                
-                &__content{
-                    padding-left: 1rem;
-                    padding-right: 1rem;
-                    display: block;
-                    width: 100%; 
-                    text-align: justify;
-                    font-size: 1rem;
-                    
-                }
-                
-                &__section{
-                    margin-top: 3rem;
-                    margin-bottom: 1rem;
-                    margin-right: 3rem;
-                    margin-left: 3rem;
-                    border: solid 1px black;
-                }
-                
-                &__titleStore{
-                    text-align: center;
-                    color: $textBorder-color;
-                }
-                
-                &__listStore{
-                    list-style: none;
-                    margin-left: 1rem;
-                    margin-right: 2rem;
-                    
-                    &__item{
-                        display: grid;
-                        grid-template-columns: repeat(5, 1fr);
-                        justify-items: center;
-                        margin-top: 0.5rem;
-                        
-                        background: linear-gradient(to right, $fon-color, white);
-                        color: white;
-                        padding-top: 0.3rem;
+                    &__title{
                         padding-left: 1rem;
-                        border-radius: 0.3rem;
+                        padding-top: 1rem;
+                        padding-bottom: 0.5rem;
                         
-                        &__countri{
-                            display: flex;
-                            justify-self: start;
-                            position: relative;
-                            top: 0.2rem;
-                        }
-                        
-                        &__price{
-                            border: solid 1px white;
-                            padding: 0.1rem;
-                            border-radius: 0.2rem;
-                        }
-                        
-                        &__buy{
-                            color: $fon-color;
-                            position: relative;
-                            top: 0.2rem;
-                        }
-                        
-                        &__convert{
-                            color: $textBorder-color;
-                            position: relative;
-                            top: 0.2rem;
-                        }
-                        
-                        &__sell{
-                            justify-self: end;
-                            color: $text-sell;
-                            position: relative;
-                            top: 0.2rem;
-                        }
                     }
-                }
-                
-                &__listProductStore{
-                    margin-top: 2.5rem;
-                    margin-right: 2rem;
-                    margin-left: 1rem;
                     
-                    &__itemList{
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        padding-left: 2rem;
-                        color: $fon-color;
-                        border-bottom: solid 2px $text-sell-bottom;
-                        padding-bottom: 0.2rem;
-                        margin-bottom: 0.7rem;
+                    &__content{
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        display: block;
+                        width: 100%; 
+                        text-align: justify;
+                        font-size: 1rem;
                         
-                        &__button{
-                            font-size: 0.8rem;
+                    }
+                    
+                    &__section{
+                        margin-top: 3rem;
+                        margin-bottom: 1rem;
+                        margin-right: 3rem;
+                        margin-left: 3rem;
+                        border: solid 1px black;
+                    }
+                    
+                    &__titleStore{
+                        text-align: center;
+                        color: $textBorder-color;
+                    }
+                    
+                    &__listStore{
+                        list-style: none;
+                        margin-left: 1rem;
+                        margin-right: 2rem;
+                        
+                        &__item{
+                            display: grid;
+                            grid-template-columns: repeat(5, 1fr);
+                            justify-items: center;
+                            margin-top: 0.5rem;
+                            
+                            background: linear-gradient(to right, $fon-color, white);
                             color: white;
-                            background-color: $textBorder-color;
-                            width: 2.9rem;
-                            height: 1.2rem;
-                            border-radius: 5px;
-                            display: flex;
-                            align-items: center; 
-                            justify-content: center; 
-                            margin-left: 74%;
+                            padding-top: 0.3rem;
+                            padding-left: 1rem;
+                            border-radius: 0.3rem;
+                            
+                            &__countri{
+                                display: flex;
+                                justify-self: start;
+                                position: relative;
+                                top: 0.2rem;
+                            }
+                            
+                            &__price{
+                                border: solid 1px white;
+                                padding: 0.1rem;
+                                border-radius: 0.2rem;
+                            }
+                            
+                            &__buy{
+                                color: $fon-color;
+                                position: relative;
+                                top: 0.2rem;
+                            }
+                            
+                            &__convert{
+                                color: $textBorder-color;
+                                position: relative;
+                                top: 0.2rem;
+                            }
+                            
+                            &__sell{
+                                justify-self: end;
+                                color: $text-sell;
+                                position: relative;
+                                top: 0.2rem;
+                            }
                         }
                     }
-                
+                    
+                    &__listProductStore{
+                        margin-top: 2.5rem;
+                        margin-right: 2rem;
+                        margin-left: 1rem;
+                        
+                        &__itemList{
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            padding-left: 2rem;
+                            color: $fon-color;
+                            border-bottom: solid 2px $text-sell-bottom;
+                            padding-bottom: 0.2rem;
+                            margin-bottom: 0.7rem;
+                            
+                            &__button{
+                                font-size: 0.8rem;
+                                color: white;
+                                background-color: $textBorder-color;
+                                width: 2.9rem;
+                                height: 1.2rem;
+                                border-radius: 5px;
+                                display: flex;
+                                align-items: center; 
+                                justify-content: center; 
+                                margin-left: 74%;
+                            }
+                        }
+                    
+                }
             }
         }
     }

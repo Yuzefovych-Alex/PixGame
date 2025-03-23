@@ -5,12 +5,15 @@
             margin-top: 1rem;
 
         &__list{
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(var(--size-columns), 1fr);
             list-style: none;
 
             &__item{
                 margin-left: 0.2rem;
                 margin-right: 0.2rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
                 display: flex;
 
                 &__box1{

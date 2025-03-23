@@ -1,7 +1,28 @@
+'use client';
+
 import styles from "@/components/Carts/Store/Carts.module.scss";
 import Image from "next/image";
+import { ReactNode, useEffect } from "react";
 
-const Carts = () => {
+interface CartsProps{
+    numberBlocks: numberBlocks;
+}
+
+const Carts: React.FC<CartsProps> = ({numberBlocks}) => {
+    useEffect(()=>{
+        document.documentElement.style.setProperty(
+            "--size-carts",
+            `${sizeMedia()}`
+          );
+
+    }, [numberBlocks]);
+
+    const sizeMedia = () => {
+        if ([3, 4, 5].includes(numberBlocks)){
+            return numberBlocks;
+        }
+        return 0;
+    };
     return (
         <>
             <li className={styles.cart__item}  style={{ borderRadius: '1.3rem'}}>

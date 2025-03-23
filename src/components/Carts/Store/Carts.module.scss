@@ -1,24 +1,293 @@
 $muibox-fon: #38214E;
 $color-shadow: #A954FC;
+$color-text: rgba(255, 255, 255, 0.5);
 
-$default-cart-width: 16.6rem;
-$default-cart-height: 27.7rem;
-$default-cart-header-font-size: 1.2rem;
+@mixin block-size-cart1() {
 
+  &{
+    width: 16.6rem;
+    height: 27.7rem;
+    margin: 0.5rem;
 
-@mixin block-size-cart($width: $default-cart-width, $height: $default-cart-height, $size: $default-cart-header-font-size) {
-  width: $width;
-  height: $height;
+    &__header{
+      padding-top: 0.7rem;
+      padding-bottom: 0.5rem;
+      
+      &__title{
+       font-size: 1.2rem;
+      }
 
-  &__header {
-    font-size: $size;
+    }
+    &__dataGood{
+      margin-top: 0.5rem;
+      margin-left: 0.3rem;
+
+      &__contaner{
+        &__data{
+          &__item{
+            width: 0.7rem;
+            height: 0.7rem;
+          }
+          &__date{
+            font-size: 1rem;
+          }
+        }
+        &__boxPrice {
+          display: flex;
+          margin-left: 0.4rem;
+          margin-top: 1rem;
+
+          &__sell {
+            position: relative;
+            left: 0.2rem;
+
+            &__title {
+              color: $color-text;
+              position: relative;
+              display: inline-block;
+
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0.1rem;
+                bottom: 0.5rem;
+                width: 100%;
+                height: 1px;
+                background-color: white;
+                transform: rotate(-30deg);
+                transform-origin: left bottom;
+              }
+            }
+          }
+
+          &__price {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+      &__box{
+        &__rating{
+          position: relative;
+          bottom: 0.7rem;
+          left: 1.3rem;
+          &__item{
+            font-size: 1.5rem;
+          }
+        }
+        &__boxSell {
+          position: relative;
+          bottom: 1rem;
+          right: 3rem;
+          margin-top: 0.6rem;
+          margin-left: 3rem;
+          display: block;
+          width: 100%;
+          height: 3.5rem;
+          background-color: white;
+          color: $muibox-fon;
+          text-align: center;
+          line-height: 2.5rem;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 1rem 50%);
+          
+          &__title {
+              position: relative;
+              left: -0.5rem;
+              right: 0.1rem;
+              top: 0.4rem;
+              font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin block-size-cart2() {
+  &{
+    width: 12.5rem;
+    height: 20.8rem;
+    margin: 0.3rem;
+
+    &__header{
+      padding-top: 0.5rem;
+      padding-bottom: 0.3rem;
+      
+      &__title{
+       font-size: 1.1rem;
+      }
+
+    }
+    &__dataGood{
+      margin-top: 0.5rem;
+      margin-left: 0.3rem;
+
+      &__contaner{
+        &__data{
+          &__item{
+            width: 0.5rem;
+            height: 0.5rem;
+          }
+          &__date{
+            font-size: 0.8rem;
+          }
+        }
+        &__boxPrice {
+          display: flex;
+          margin-left: 0.6rem;
+          margin-top: 0.6rem;
+
+          &__sell {
+            position: relative;
+            left: 0.2rem;
+
+            &__title {
+              color: $color-text;
+              position: relative;
+              display: inline-block;
+              font-size: 1rem;
+
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0.1rem;
+                bottom: 0.5rem;
+                width: 100%;
+                height: 1px;
+                background-color: white;
+                transform: rotate(-30deg);
+                transform-origin: left bottom;
+              }
+            }
+          }
+
+          &__price {
+            margin-left: 0.5rem;
+            h2{
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      &__box{
+        &__rating{
+          margin-top: 0.3rem;
+          margin-bottom: 0.5rem;
+          position: relative;
+          bottom: 0.7rem;
+          left: 1.3rem;
+          &__item{
+            font-size: 1rem;
+          }
+        }
+        &__boxSell {
+          position: relative;
+          bottom: 1rem;
+          right: 1.5rem;
+          margin-top: 0.3rem;
+          margin-left: 2rem;
+          display: block;
+          width: 100%;
+          height: 2.3rem;
+          background-color: white;
+          color: $muibox-fon;
+          text-align: center;
+          line-height: 2.5rem;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 1rem 50%);
+          
+          &__title {
+              position: relative;
+              left: -0.5rem;
+              right: 0.5rem;
+              top: -0.1rem;
+              font-size: 1rem;
+            }
+        }
+      }
+    }
+  }
+}
+@mixin block-size-cart3() {
+  &{
+    width: 12.5rem;
+    height: 20.8rem;
+    margin: 0.3rem;
+
+    &__header{
+      padding-top: 0.5rem;
+      padding-bottom: 0.3rem;
+      
+      &__title{
+       font-size: 1.1rem;
+      }
+
+    }
+    &__dataGood{
+      margin-top: 0.5rem;
+      margin-left: 0.3rem;
+
+      &__contaner{
+        &__data{
+          &__item{
+            width: 0.5rem;
+            height: 0.5rem;
+          }
+          &__date{
+            font-size: 0.8rem;
+          }
+        }
+      }
+      &__box{
+        &__rating{
+          position: relative;
+          bottom: 0.7rem;
+          left: 1.3rem;
+          &__item{
+            font-size: 1.2rem;
+          }
+        }
+        &__boxSell {
+          position: relative;
+          bottom: 1rem;
+          right: 1.5rem;
+          margin-top: 0.3rem;
+          margin-left: 2rem;
+          display: block;
+          width: 100%;
+          height: 2.6rem;
+          background-color: white;
+          color: $muibox-fon;
+          text-align: center;
+          line-height: 2.5rem;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 1rem 50%);
+          
+          &__title {
+              position: relative;
+              left: 0.2rem;
+              right: 0.1rem;
+              top: 0rem;
+              font-size: 1.3rem;
+            }
+        }
+      }
+    }
+  }
+}
+
+$number: 3;
+@mixin switch-block($number: $number) {
+  @if $number == 3{
+    @include block-size-cart1();
+  }
+  @else if $number == 4{
+    @include block-size-cart2();
+  }
+  @else if $number == 5{
+    @include block-size-cart3();
   }
 }
 
 .cart__item {
   background-color: $muibox-fon;
-  @include block-size-cart();
-    margin: 1rem;
+    @include switch-block(4);
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 5px 0.3px rgba(255, 255, 255, 0.5);;
@@ -51,8 +320,6 @@ $default-cart-header-font-size: 1.2rem;
 
 
   &__header {
-    padding-top: 0.7rem;
-    padding-bottom: 0.5rem;
     font-size: 1.2rem;
     
     &__title {
@@ -72,15 +339,13 @@ $default-cart-header-font-size: 1.2rem;
       }
     }
 
-    &:hover &__contaner img {
-      transform: scale(1.2);
-    }
+    // &:hover &__contaner img {
+    //   transform: scale(1.2);
+    // }
 
     &__dataGood {
       color: white;
       height: 30%;
-      margin-top: 0.5rem;
-      margin-left: 0.3rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
@@ -91,8 +356,6 @@ $default-cart-header-font-size: 1.2rem;
           &__item {
             margin-left: 0.1rem;
             margin-right: 0.1rem;
-            width: 0.7rem;
-            height: 0.7rem;
             background-color: white;
           }
 
@@ -104,70 +367,16 @@ $default-cart-header-font-size: 1.2rem;
           }
         }
 
-        &__boxPrice {
-          display: flex;
-          margin-left: 0.3rem;
-          margin-top: 0.5rem;
-
-          &__sell {
-            &__title {
-              color: #A954FC;
-              position: relative;
-              display: inline-block;
-
-              &::after {
-                content: "";
-                position: absolute;
-                left: 0.1rem;
-                bottom: 0.5rem;
-                width: 100%;
-                height: 1px;
-                background-color: white;
-                transform: rotate(-30deg);
-                transform-origin: left bottom;
-              }
-            }
-          }
-
-          &__price {
-            margin-left: 0.5rem;
-          }
-        }
       }
       &__box{
         &__rating{
-          position: relative;
-          bottom: 0.7rem;
-          left: 2rem;
   
             &__item{
               color: $color-shadow;
-              font-size: 1.5rem;
             }
           }
 
-          &__boxSell {
-              position: relative;
-              bottom: 1rem;
-              right: 1.5rem;
-              margin-top: 0.5rem;
-              margin-left: 3rem;
-              display: block;
-              width: 100%;
-              height: 3.2rem;
-              background-color: white;
-              color: $muibox-fon;
-              text-align: center;
-              line-height: 2.5rem;
-              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 1rem 50%);
-              
-              &__title {
-                  position: relative;
-                  right: 0.1rem;
-                  top: 0.3rem;
-                  font-size: 1.6rem;
-                }
-            }
+          
         }
     }
 }

@@ -14,7 +14,7 @@ const MarketHome = () => {
             <ProgramBlock/>
             <Event/>
             <SectionProduct/>
-            <MuiBox>
+            <MuiBox numberBlocks={5}>
                 <Carts/>
                 <Carts/>
                 <Carts/>

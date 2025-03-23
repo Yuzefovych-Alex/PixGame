@@ -4,15 +4,17 @@ import Header from "@/components/Header/Header";
 //import Registr from "@/components/Pages/Registr";
 import "@/app/global.scss";
 //import StoreHome from "@/app/store/home";
-import Product from "./store/product";
+import StoreProduct from "./store/product";
 //import MarketHome from "./market/home";
 //import MarketProduct from "./market/product";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
     return (
         <>
             <Header/>
-            <Product/>
+            <StoreProduct/>
+            <Footer/>
         </>
     );
 }
