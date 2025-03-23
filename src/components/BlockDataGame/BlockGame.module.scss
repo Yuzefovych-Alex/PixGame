@@ -79,7 +79,7 @@ $title-color: rgba(0, 0, 0, 0.5);
                         width: 14rem;
                         height: 3px;
                     }
-                    
+
                     &__cube{
                         background-color: white;
                         width: 1rem;
@@ -105,18 +105,36 @@ $title-color: rgba(0, 0, 0, 0.5);
                     }
 
                     &__developer{
+                        margin-top: 1rem;
                         display: flex;
 
-                        &__title{
-                            color: $textBorder-color;
+                        &__content{
+                            display: inline;
+                            font-size: 0.9rem;
+
+                            &__title{
+                                display: inline;
+                                color: $textBorder-color;
+                                margin-right: 0.5rem;
+                                font-size: 1.2rem;
+                            }
                         }
                     }
 
                     &__publisher{
                         display: flex;
+                        margin-top: 0.5rem;
 
-                        &__title{
-                            color: $textBorder-color;
+                        &__content{
+                            display: inline;
+                            font-size: 0.9rem;
+
+                            &__title{
+                                display: inline;
+                                color: $textBorder-color;
+                                margin-right: 0.5rem;
+                                font-size: 1.2rem;
+                            }
                         }
                     }
 

@@ -44,12 +44,14 @@ const BlockDataGame = () => {
                                     <div className={styles.blockData__contaner__leftBlock__header__data__dataGame__date}>10.02.25</div>
                                 </div>
                                 <div className={styles.blockData__contaner__leftBlock__header__data__developer}>
-                                    <h3 className={styles.blockData__contaner__leftBlock__header__data__developer__title}>Developer:</h3>
-                                    <p className={styles.blockData__contaner__leftBlock__header__data__developer__content}>Naughty Dog LLC, Nixxes Software, Iron Galaxy Studios</p>
+                                    <p className={styles.blockData__contaner__leftBlock__header__data__developer__content}>
+                                    <h3 className={styles.blockData__contaner__leftBlock__header__data__developer__content__title}>Developer:</h3>
+                                        Naughty Dog LLC, Nixxes Software, Iron Galaxy Studios</p>
                                 </div>
                                 <div className={styles.blockData__contaner__leftBlock__header__data__publisher}>
-                                    <h3 className={styles.blockData__contaner__leftBlock__header__data__publisher__title}>Publisher:</h3>
-                                    <p className={styles.blockData__contaner__leftBlock__header__data__publisher__content}>PlayStation Publishing LLC</p>
+                                    <p className={styles.blockData__contaner__leftBlock__header__data__publisher__content}>
+                                    <h3 className={styles.blockData__contaner__leftBlock__header__data__publisher__content__title}>Publisher:</h3>
+                                    PlayStation Publishing LLC</p>
                                 </div>
                             </div>
                         </div>
