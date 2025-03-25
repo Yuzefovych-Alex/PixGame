@@ -1,38 +1,52 @@
 'use client';
 
 import styles from "@/components/Slider/Slider.module.scss";
-import { useState } from "react";
-//import Image from "next/image";
-
+import { useState, useEffect } from "react";
 
 const Slider = () => {
     const [positionItemSlider, setPositionItemSlider] = useState(0);
-    const [transitionDuration, setTransitionDuration] = useState('0.3s'); // Set initial transition duration
+    const [transitionDuration, setTransitionDuration] = useState('1s'); 
+
+    const totalItems = 4; 
+    const itemWidth = 70.8; 
 
     const pageItemOne = () => {
         setPositionItemSlider(0);
-        setTransitionDuration('0.8s');  // Set transition to 0.8s
+        setTransitionDuration('0.8s');  
     };
 
     const pageItemTwo = () => {
-        setPositionItemSlider(-(70.8));
+        setPositionItemSlider(-(itemWidth));
         setTransitionDuration('0.8s');
     };
 
     const pageItemThree = () => {
-        setPositionItemSlider(-(70.8 * 2));
+        setPositionItemSlider(-(itemWidth * 2));
         setTransitionDuration('0.8s');
     };
 
     const pageItemFore = () => {
-        setPositionItemSlider(-(70.8 * 3));
-        setTransitionDuration('0.8s');
+        setPositionItemSlider(-(itemWidth * 3));
+        setTransitionDuration('1.2s');
     };
 
-    // Function to check if the button is active
     const isActiveButton = (position) => {
         return Math.abs(positionItemSlider - position) < 0.1;
     };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const nextPosition = positionItemSlider - itemWidth;
+            if (nextPosition < -(itemWidth * (totalItems - 1))) {
+                setPositionItemSlider(0);
+            } else {
+                setPositionItemSlider(nextPosition);
+            }
+        }, 6000); 
+
+        return () => clearInterval(interval); 
+    }, [positionItemSlider, itemWidth, totalItems]);
+
 
     return (
         <div className={styles.slider}>
@@ -148,7 +162,7 @@ const Slider = () => {
                             <span className={styles.slider__contaner__list__item__rating__item}>★</span>
                             <span className={styles.slider__contaner__list__item__rating__item}>★</span>
                         </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-7s0%</h3>
+                        <h3 className={styles.slider__contaner__list__item__sell}>-70%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
                             <div className={styles.slider__contaner__list__item__data__os}>
                                 <div className={styles.slider__contaner__list__item__data__os__item}></div>

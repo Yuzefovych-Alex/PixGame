@@ -2,6 +2,7 @@ $color-text: #38214e;
 $color-block-item: #C4C4C4;
 
 .programBlock{
+    margin-top: 1rem;
     &__contaner{
         display: grid;
         justify-items: center;
@@ -15,7 +16,8 @@ $color-block-item: #C4C4C4;
 
                 &__block{
                     color: $color-text;
-                    width: 21.6rem;
+                    //width: 21.6rem;
+                    width: 70rem;
                     height: 39rem;
                     background-color: white;
                     border-radius: 2rem;
@@ -24,11 +26,25 @@ $color-block-item: #C4C4C4;
                     &__title{
                         margin-top: 1rem;
                         margin-bottom: 1rem;
+                        display: flex;
+
+                        &__triangle{
+                            width: 0;
+                            height: 0;
+                            border-left: 0.3rem solid transparent;
+                            border-right: 0.3rem solid transparent;
+                            border-bottom: 0.6rem solid $color-text;
+                            transform: rotate(90deg);
+                            position: relative;
+                            top: 0.6rem;
+                            left: 0.4rem;
+                        }
                     }
 
                     &__list{
                         list-style: none;
                         display: grid;
+                        grid-template-columns: repeat(4, 1fr);
                         justify-items: center;
                         margin-bottom: 2rem;
 
@@ -67,6 +83,10 @@ $color-block-item: #C4C4C4;
                     &__href{
                         padding-top: 0.2rem;
                         text-align: center;
+
+                        &__triangle{
+                            
+                        }
                     }
                 }
             }

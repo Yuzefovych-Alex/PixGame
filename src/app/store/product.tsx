@@ -3,10 +3,13 @@ import BlockDataGame from "@/components/BlockDataGame/BlockGame";
 import Section from "@/components/Section/Section";
 import MuiBox from "@/components/BlockProduct/MuiBox";
 import CartsSell from "@/components/Carts/Store/CartsSell"
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const StoreProduct = () =>{
     return (
         <>
+            <Header/>
             <Search/>
             <BlockDataGame/>
             <Section/>
@@ -16,6 +19,7 @@ const StoreProduct = () =>{
                 <CartsSell/>
                 <CartsSell/>
             </MuiBox>
+            <Footer/>
         </>
     );
 };

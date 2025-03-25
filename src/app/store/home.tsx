@@ -4,10 +4,13 @@ import Slider from "@/components/Slider/Slider";
 import MuiBox from "@/components/BlockProduct/MuiBox";
 import CartsSell from "@/components/Carts/Store/CartsSell"
 import Carts from "@/components/Carts/Store/Carts";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const StoreHome = () => {
     return (
         <>
+            <Header/>
             <Search/>
             <MultiBox/>
             <Slider/>
@@ -27,6 +30,7 @@ const StoreHome = () => {
                 <Carts/>
                 <Carts/>
             </MuiBox>
+            <Footer/>
         </>
     );
 };
