@@ -1,0 +1,31 @@
+$panel-widht: 30rem;
+$panel-height: 30rem;
+
+.systemRequirement{
+    display: grid;
+    justify-items: center;
+
+    &__contaner{
+        margin: 1rem;
+        background-color: white;
+        width: $panel-widht;
+        height: $panel-height; 
+        border-radius: 2rem;
+        padding: 1rem;
+        
+        &__buttons{
+
+        }
+
+        &__options{
+            &__system{
+                &__title{
+
+                }
+                &__input{
+                    
+                }
+            }
+        }
+    }
+}

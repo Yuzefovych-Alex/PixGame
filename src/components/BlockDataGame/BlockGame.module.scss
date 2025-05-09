@@ -4,28 +4,32 @@ $text-sell: rgba(27, 20, 34, 0.4);
 $text-sell-bottom: rgba(56, 33, 78, 0.2);
 $title-color: rgba(0, 0, 0, 0.5);
 
-.blockData{
+.blockData {
     margin-top: 2rem;
 
-    &__contaner{
-        display: flex;
+    &__contaner {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1px;
         justify-content: center;
-        align-items: center;
+        align-items: start;
 
-        &__leftBlock{
-            &__header{
+        &__leftBlock {
+            align-self: start;
+
+            &__header {
                 margin-right: 2rem;
                 color: white;
 
-                &__image{
-                    background-color: white;
+                &__image {
+                    //background-color: white;
                     position: relative;
                     width: 16.8rem;
                     height: 25.5rem;
                     border-radius: 30px 30px 62px 0px;
                     overflow: hidden;
-                    
-                    &__rating{
+
+                    &__rating {
                         z-index: 6;
                         display: flex;
                         position: relative;
@@ -36,7 +40,7 @@ $title-color: rgba(0, 0, 0, 0.5);
                         height: 1.7rem;
                         border-radius: 0.5rem;
 
-                        &__item{
+                        &__item {
                             font-size: 1.5rem;
                             color: $textBorder-color;
                             text-shadow: 0px 3px 5px $title-color;
@@ -45,11 +49,11 @@ $title-color: rgba(0, 0, 0, 0.5);
                         }
                     }
 
-                    &__photo{
+                    &__photo {
                         object-fit: cover;
                     }
 
-                    &__sell{
+                    &__sell {
                         color: $fon-color;
                         background-color: white;
                         width: 7rem;
@@ -62,7 +66,7 @@ $title-color: rgba(0, 0, 0, 0.5);
                         clip-path: polygon(0 0, 100% 0, 75% 50%, 75% 50%, 100% 100%, 0 100%);
 
 
-                        &__title{
+                        &__title {
                             position: relative;
                             right: 0.9rem;
                             font-size: 1.4rem;
@@ -70,17 +74,17 @@ $title-color: rgba(0, 0, 0, 0.5);
                     }
                 }
 
-                &__section{
+                &__section {
                     display: flex;
-                    
 
-                    &__line{
+
+                    &__line {
                         background-color: white;
                         width: 14rem;
                         height: 3px;
                     }
 
-                    &__cube{
+                    &__cube {
                         background-color: white;
                         width: 1rem;
                         height: 1rem;
@@ -91,63 +95,66 @@ $title-color: rgba(0, 0, 0, 0.5);
                     }
                 }
 
-                &__data{
+                &__data {
                     margin-top: -1rem;
                     background-color: $fon-color;
                     width: 16.8rem;
-                    height: 15.1rem;
+                    //height: 15.1rem;
                     border-radius: 0px 60px 30px 30px;
                     padding: 1rem;
 
-                    &__nameGame{
-                        font-size: 1.3rem;
-
+                    &__nameGame {
+                        font-size: 1.2rem;
+                        font-weight: normal;
                     }
 
-                    &__developer{
+                    &__developer {
                         margin-top: 1rem;
                         display: flex;
 
-                        &__content{
+                        &__content {
                             display: inline;
                             font-size: 0.9rem;
 
-                            &__title{
+                            &__title {
                                 display: inline;
                                 color: $textBorder-color;
                                 margin-right: 0.5rem;
                                 font-size: 1.2rem;
+                                font-weight: normal;
                             }
                         }
                     }
 
-                    &__publisher{
+                    &__publisher {
                         display: flex;
                         margin-top: 0.5rem;
 
-                        &__content{
+
+                        &__content {
                             display: inline;
                             font-size: 0.9rem;
 
-                            &__title{
+                            &__title {
                                 display: inline;
                                 color: $textBorder-color;
                                 margin-right: 0.5rem;
                                 font-size: 1.2rem;
+                                font-weight: normal;
                             }
                         }
                     }
 
-                    &__dataGame{
+                    &__dataGame {
                         display: flex;
                         margin-top: 0.5rem;
                         margin-bottom: 0.5rem;
 
-                        &__os{
+                        &__os {
                             display: flex;
                             margin-right: 0.5rem;
 
-                            &__image{
+                            &__image {
                                 background-color: white;
                                 width: 1.2rem;
                                 height: 1.2rem;
@@ -155,7 +162,7 @@ $title-color: rgba(0, 0, 0, 0.5);
                             }
                         }
 
-                        &__date{
+                        &__date {
                             position: relative;
                             top: 0.3rem;
                         }
@@ -166,109 +173,142 @@ $title-color: rgba(0, 0, 0, 0.5);
         }
 
 
-        &__rightBlock{
-            &__main{
-                    background-color: white;
-                    width: 33.5rem;
-                    height: 40.7rem;
-                    border-radius: 0px 0px 5px 10px;
-                    
-                    &__title{
+        &__rightBlock {
+            align-self: start;
+
+            &__section {
+                width: 33.9rem;
+                height: 0.3rem;
+                background-color: $textBorder-color;
+                position: relative;
+                right: 0.2rem;
+                border-radius: 1rem;
+                box-shadow: 0 2px 5px 1px rgb(54, 54, 54);
+            }
+
+            &__main {
+                background-color: white;
+                width: 33.5rem;
+                //height: 40.7rem;
+                
+                border-radius: 0px 0px 5px 10px;
+
+                &__title {
+                    padding-left: 1rem;
+                    padding-top: 1rem;
+                    padding-bottom: 0.5rem;
+
+                }
+
+                &__content {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    display: block;
+                    width: 100%;
+                    text-align: justify;
+                    font-size: 1rem;
+
+                }
+
+                &__section {
+                    margin-top: 3rem;
+                    margin-bottom: 1rem;
+                    margin-right: 3rem;
+                    margin-left: 3rem;
+                    border: solid 1px black;
+                }
+
+                &__titleStore {
+                    text-align: center;
+                    color: $textBorder-color;
+                }
+
+                &__listStore {
+                    list-style: none;
+                    margin-left: 1rem;
+                    margin-right: 2rem;
+
+                    &__item {
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        justify-items: center;
+                        margin-top: 0.5rem;
+
+                        background: linear-gradient(to right, $fon-color, white);
+                        color: white;
+                        padding-top: 0.3rem;
                         padding-left: 1rem;
-                        padding-top: 1rem;
-                        padding-bottom: 0.5rem;
-                        
-                    }
-                    
-                    &__content{
-                        padding-left: 1rem;
-                        padding-right: 1rem;
-                        display: block;
-                        width: 100%; 
-                        text-align: justify;
-                        font-size: 1rem;
-                        
-                    }
-                    
-                    &__section{
-                        margin-top: 3rem;
-                        margin-bottom: 1rem;
-                        margin-right: 3rem;
-                        margin-left: 3rem;
-                        border: solid 1px black;
-                    }
-                    
-                    &__titleStore{
-                        text-align: center;
-                        color: $textBorder-color;
-                    }
-                    
-                    &__listStore{
-                        list-style: none;
-                        margin-left: 1rem;
-                        margin-right: 2rem;
-                        
-                        &__item{
-                            display: grid;
-                            grid-template-columns: repeat(5, 1fr);
-                            justify-items: center;
-                            margin-top: 0.5rem;
-                            
-                            background: linear-gradient(to right, $fon-color, white);
-                            color: white;
-                            padding-top: 0.3rem;
-                            padding-left: 1rem;
-                            border-radius: 0.3rem;
-                            
-                            &__countri{
-                                display: flex;
-                                justify-self: start;
-                                position: relative;
-                                top: 0.2rem;
-                            }
-                            
-                            &__price{
-                                border: solid 1px white;
-                                padding: 0.1rem;
-                                border-radius: 0.2rem;
-                            }
-                            
-                            &__buy{
-                                color: $fon-color;
-                                position: relative;
-                                top: 0.2rem;
-                            }
-                            
-                            &__convert{
-                                color: $textBorder-color;
-                                position: relative;
-                                top: 0.2rem;
-                            }
-                            
-                            &__sell{
-                                justify-self: end;
-                                color: $text-sell;
-                                position: relative;
-                                top: 0.2rem;
-                            }
+                        border-radius: 0.3rem;
+
+                        &__countri {
+                            display: flex;
+                            justify-self: start;
+                            position: relative;
+                            top: 0.2rem;
+                        }
+
+                        &__price {
+                            border: solid 1px white;
+                            padding: 0.1rem;
+                            border-radius: 0.2rem;
+                        }
+
+                        &__buy {
+                            color: $fon-color;
+                            position: relative;
+                            top: 0.2rem;
+                        }
+
+                        &__convert {
+                            color: $textBorder-color;
+                            position: relative;
+                            top: 0.2rem;
+                        }
+
+                        &__sell {
+                            justify-self: end;
+                            color: $text-sell;
+                            position: relative;
+                            top: 0.2rem;
                         }
                     }
-                    
-                    &__listProductStore{
-                        margin-top: 2.5rem;
-                        margin-right: 2rem;
-                        margin-left: 1rem;
-                        
-                        &__itemList{
+                }
+
+                &__listProductStore {
+                    margin-top: 2.5rem;
+                    margin-right: 2rem;
+                    margin-left: 1rem;
+
+                    &__link {
+                        text-decoration: none;
+
+                        &__itemList {
                             display: grid;
-                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-columns: repeat(4, 1fr);
                             padding-left: 2rem;
                             color: $fon-color;
                             border-bottom: solid 2px $text-sell-bottom;
                             padding-bottom: 0.2rem;
                             margin-bottom: 0.7rem;
-                            
-                            &__button{
+
+                            &__item {
+                                margin-right: 1rem;
+                            }
+
+                            &__sellPrice {
+                                margin-left: 1rem;
+                                background-color: $fon-color;
+                                color: white;
+                                padding-left: 1rem;
+                                clip-path: polygon(0 0, 100% 0, 90% 50%, 90% 50%, 100% 100%, 0 100%);
+
+                            }
+
+                            &__shopPrice {
+                                margin-left: 12rem;
+                            }
+
+                            &__button {
                                 font-size: 0.8rem;
                                 color: white;
                                 background-color: $textBorder-color;
@@ -276,12 +316,12 @@ $title-color: rgba(0, 0, 0, 0.5);
                                 height: 1.2rem;
                                 border-radius: 5px;
                                 display: flex;
-                                align-items: center; 
-                                justify-content: center; 
-                                margin-left: 74%;
+                                align-items: center;
+                                justify-content: center;
+                                margin-left: 20%;
                             }
                         }
-                    
+                    }
                 }
             }
         }

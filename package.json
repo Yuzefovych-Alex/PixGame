@@ -12,10 +12,14 @@
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
+    "axios": "^1.8.4",
     "next": "^15.2.3",
+    "npx": "^3.0.0",
+    "pixgame": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sass": "^1.85.0"
+    "sass": "^1.85.0",
+    "use-router": "^0.4.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

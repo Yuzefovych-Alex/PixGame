@@ -41,21 +41,40 @@ $color-text: #6218AA;
       }
     }
 
-    &__login {
-      color: $color-text;
-      font-size: 1rem;
-      background-color: white;
-      font-weight: 600;
-      border-radius: 1rem;
-      padding: 0.3rem;
-      border: solid 3px $color-text;
-      transition: all 0.5s ease-in-out;
-    }
+    &__link{
+      text-decoration: none;
 
-    &__login:hover{
-      background-color: $color-text;
-      color: white;
-      transition: all 0.5s ease-in-out;
+      &__login {
+        color: $color-text;
+        font-size: 1rem;
+        background-color: white;
+        font-weight: 600;
+        border-radius: 0.6rem;
+        padding: 0.3rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border: solid 2px $color-text;
+        transition: all 0.5s ease-in-out;
+        
+      }
+
+      &__login:hover{
+        background-color: $color-text;
+        color: white;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  
+    &__trolley{
+      position: relative;
+      width: 1.7rem;
+      height: 1.7rem;
+      top: 0.2rem;
+      margin-left: 0.7rem;
+
+      &__image{
+        
+      }
     }
   }
 }

@@ -1,0 +1,23 @@
+$panel-widht: 30rem;
+$panel-height: 30rem;
+
+.description{
+    display: grid;
+    justify-items: center;
+
+    &__contaner{
+        margin: 1rem;
+        background-color: white;
+        width: $panel-widht;
+        height: $panel-height; 
+        border-radius: 2rem;
+        padding: 1rem;
+
+        &__input{
+            width: 100%;
+            height: 100%;
+            vertical-align: bottom;
+            padding: 0.4rem;
+        }
+    }
+}

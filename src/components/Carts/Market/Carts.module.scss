@@ -1,78 +1,183 @@
-$color-cart: #38214E;
-$background-color-text: rgba(27, 20, 34);
+$muibox-fon: #38214E;
+$color-shadow: #A954FC;
+$color-text: rgba(255, 255, 255, 0.5);
+$color: #1b1422;
 
-.cart__item{
-    margin: 0.6rem;
+.cart__item {
+    background-color: #38214E;
+    width: 16.6rem;
+    height: 26rem;
+    margin: 0.5rem;
+    border-radius: 1.3rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 20px #100c16,
+        -10px -10px 20px #261a34;
+    transition: 0.3s ease;
 
-        &__contaner{
-            background-color: $color-cart;
-            width: 12.5rem;
-            height: 20.8rem;
-            border-radius: 13.3px;
-            
-            &__header{
-                padding: 0.5rem;
-                
-                &__title{
-                    color: white;
-                    text-align: center;
-                }
-            }
-            
-            &__content{
-                background-color: white;
-                width: 100%;
-                height: 68%;
-                
-                &__image{
-                    width: 100%;
-                    height: 67%;
-                }
-                
-                &__content{
-                    margin: 0.1rem;
-                    background-color: $background-color-text;
-                    color: white;
-                    padding: 0.3rem;
-                }
-            }
-            
-            &__footer{
-                &__contaner{
-                    color: white;
-                    
-                    &__part1{
-                        padding-top: 0.2rem;
-                        padding-left: 1rem;
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        
-                        &__start{
-                            
-                        }
-                    }
-                    &__part2{
-                        margin-top: 1rem;
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        
-                        &__price{
-                            margin-left: 1rem;
-                            display: flex;
-                        }
-                        &__sell{
-                            font-weight: 600 !important;
-                            font-size: 1.3rem;
-                            position: relative;
-                            bottom: 1rem;
-                            background-color: white;
-                            color: $color-cart;
-                            text-align: center;
-                            line-height: 2.5rem;
-                            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 1rem 50%);
-                        }
-                    }
-                }
-            }           
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 12px 12px 24px #100c16,
+            -12px -12px 24px #261a34;
+    }
+
+    &__header {
+        padding: 0.7rem 0 0.5rem;
+        display: flex;
+
+        &__image {
+            background-color: white;
+            position: relative;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 2rem;
+            left: 1rem;
+        }
+
+        &__title {
+            color: white;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-left: 1.5rem;
+            position: relative;
+            top: 0.25rem;
         }
     }
+
+    &__contaner {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+            z-index: 0;
+        }
+
+    }
+
+    &__dataGood {
+        background-color: $muibox-fon;
+        color: white;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        //padding: 0.4rem;
+
+        &__contaner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+            &__data {
+                background-color: $color;
+                width: 100%;
+                padding: 0.3rem;
+
+                &__section {
+                    align-items: center;
+                    display: flex;
+
+
+                    &__date {
+                        flex: 1;
+                        font-size: 0.7rem;
+                        margin-left: 0.7rem;
+
+                        &__item {
+                            position: relative;
+                            bottom: 0.1rem;
+                        }
+                    }
+
+                    &__box {
+                        display: flex;
+                        align-items: center;
+
+                        &__rating {
+                            display: flex;
+                            margin-right: 0.7rem;
+
+                            &__item {
+                                font-size: 1rem;
+                                color: $color-shadow;
+                            }
+                        }
+                    }
+                }
+
+                &__description {
+                    height: 5rem;
+                    padding: 0.4rem;
+                    padding-bottom: 1rem;
+                    font-size: 0.9rem;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
+                    white-space: normal;
+                }
+            }
+
+            &__boxPrice {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                align-items: center;
+
+                &__sell {
+                    justify-self: start;
+                    position: static; 
+                    top: auto;
+                    right: auto;
+
+                    &__sell {
+                        background-color: white;
+                        color: $color;
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        padding: 0.6rem 1.2rem;
+                        border-radius: 0 1.3rem 0 1.3rem;
+                        z-index: 10;
+                    }
+                }
+
+                &__box {
+                    display: flex;
+                    align-items: center; 
+                    justify-self: end; 
+                    margin-right: 1rem;
+                    margin-top: 0.7rem;
+
+                    &__sell {
+                        display: flex;
+                        align-items: center; 
+                        
+                        &__title {
+                            color: $color-text;
+                            display: block;
+                            font-size: 1rem;
+                            font-weight: normal;
+                            text-decoration: line-through;
+                            text-decoration-thickness: 2px;
+                        }
+                    }
+
+                    &__price {
+                        margin-left: 0.7rem;
+
+                        &__title {
+                            font-size: 1rem;
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

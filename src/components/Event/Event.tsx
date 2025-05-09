@@ -24,6 +24,11 @@ const Event = () => {
                             <div className={styles.event__contaner__list__item__box__image}></div>
                         </div>
                     </li>
+                    <li className={styles.event__contaner__list__item}>
+                        <div className={styles.event__contaner__list__item__box}>
+                            <div className={styles.event__contaner__list__item__box__image}></div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>

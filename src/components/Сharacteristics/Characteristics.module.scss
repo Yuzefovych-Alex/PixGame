@@ -16,6 +16,7 @@ $color-text-buttonOn: #A954FC;
         &__title{
             color: white;
             margin-bottom: 1rem;
+            font-weight: normal;
         }
     
         &__buttons{
@@ -27,10 +28,16 @@ $color-text-buttonOn: #A954FC;
             &__buttonOne{
                 justify-self: start;
                 background-color: $color-block;
-                color: $color-text-buttonOn;
+                color: $color-text-buttonOff;
                 border: solid 1px $color-block;
                 font-size: 1rem;
                 font-family: "Madimi One", serif;
+                transition: all 0.5s ease;
+
+                &:hover{
+                    transition: all 0.5s ease;
+                    color: white;
+                }
             }
 
             &__buttonTwo{
@@ -40,7 +47,18 @@ $color-text-buttonOn: #A954FC;
                 border: solid 1px $color-block;
                 font-size: 1rem;
                 font-family: "Madimi One", serif;
+                transition: all 0.5s ease;
+
+                &:hover{
+                    transition: all 0.5s ease;
+                    color: white;
+                }
             }
+
+            .active {
+                background-color: $color-block;
+                color: $color-text-buttonOn;
+            }            
         }
         
         &__list{
@@ -53,13 +71,17 @@ $color-text-buttonOn: #A954FC;
                 margin-bottom: 1.5rem;
 
                 &__box{
-                    background-color: white;
-                    width: 1rem;
-                    height: 1rem;
+                    position: relative;
+                    bottom: 0.1rem;
+                    //background-color: white;
+                    width: 1.3rem;
+                    height: 1.3rem;
+
+                    
                 }
 
                 &__title{
-                    margin-left: 0.5rem;
+                    margin-left: 1rem;
                     color: white;
                 }
 

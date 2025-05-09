@@ -6,17 +6,13 @@ const SingIn = () => {
             <div className={styles.singIn__contaner}>
                 <h1 className={styles.singIn__contaner__title}>Sing in</h1>
                 <div className={styles.singIn__contaner__writingInput}>
-                    <input className={styles.singIn__contaner__writingInput__email} placeholder="Email"/>
-                    <input className={styles.singIn__contaner__writingInput__password} placeholder="Password"/>
-                </div>
-                <div className={styles.singIn__contaner__data}>
-                    <div className={styles.singIn__contaner__data__contaner}>
-                        <h5 className={styles.singIn__contaner__data__contaner__password}>forgot you password?</h5>
-                        <h5 className={styles.singIn__contaner__data__contaner__login}>Login?</h5>
-                    </div>
+                    <input className={styles.singIn__contaner__writingInput__name} placeholder="Name" />
+                    <input className={styles.singIn__contaner__writingInput__email} placeholder="Email" />
+                    <input className={styles.singIn__contaner__writingInput__password} placeholder="Password" />
+                    <input className={styles.singIn__contaner__writingInput__confirmPassword} placeholder="Confirm password" />
                 </div>
                 <div className={styles.singIn__contaner__contanerButton}>
-                    <button className={styles.singIn__contaner__contanerButton__button}>Sing in</button>
+                    <button className={styles.singIn__contaner__contanerButton__button}>Sing in &gt;</button>
                 </div>
                 <div className={styles.singIn__contaner__message}>
                     <div className={styles.singIn__contaner__message__contaner}>
@@ -27,6 +23,8 @@ const SingIn = () => {
                 </div>
             </div>
         </div>
+
+
     );
 };
 

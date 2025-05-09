@@ -1,0 +1,16 @@
+$color-text: #6218AA;
+
+.panel__header{
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    border-radius: 0rem 0rem 3rem 3rem;
+
+    &__contaner{
+
+        &__nameAdmin{
+            text-align: center;
+            color: $color-text;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+$color-button: #a954fc;
+$color-text: white;
+
+.addCommentar {
+    margin-top: 0.7rem;
+
+    &__contaner {
+        &__input {
+            width: 90%;
+            padding: 0.5rem;
+            border-radius: 0.6rem;
+            border: solid 0px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__button {
+            margin-left: 0.3rem;
+            background-color: $color-button;
+            border: solid 2px $color-button;
+            color: $color-text;
+            padding-left: 0.5rem;
+            padding-right: 0.4rem;
+            border-radius: 0.5rem;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            font-weight: bold;
+        }
+    }
+}

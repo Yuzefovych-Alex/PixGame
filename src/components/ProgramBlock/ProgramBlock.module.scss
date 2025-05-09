@@ -17,7 +17,7 @@ $color-block-item: #C4C4C4;
                 &__block{
                     color: $color-text;
                     //width: 21.6rem;
-                    width: 70rem;
+                    width: 20rem;
                     height: 39rem;
                     background-color: white;
                     border-radius: 2rem;
@@ -44,7 +44,7 @@ $color-block-item: #C4C4C4;
                     &__list{
                         list-style: none;
                         display: grid;
-                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-columns: repeat(1, 4fr);
                         justify-items: center;
                         margin-bottom: 2rem;
 

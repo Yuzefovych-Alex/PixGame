@@ -2,35 +2,29 @@
 
 import styles from "@/components/Сharacteristics/Characteristics.module.scss";
 import { useState } from "react";
+import Image from "next/image";
 
-const dataMinimum = {
-    os: "Windows 10 (64-bit)",
-    cpu: "Intel Core i7-6700 ",
-    ram: "12 GB",
-    gpu: "NVIDIA GeForce GTX 1060   ",
-    disk: "70 GB",
-    direct: "DirectX 12"
-};
 
-const dataRecommended = {
-    os: "Windows 11 (64-bit)",
-    cpu: "Intel Core i7-6700 ",
-    ram: "12 GB",
-    gpu: "NVIDIA GeForce GTX 1060",
-    disk: "70 GB",
-    direct: "DirectX 12"
-};
+interface CharacteristicsProps {
+    minimum: minimum;
+    recommended: recommended;
+}
 
-const Characteristics = () => {
-    const [currentData, setCurrentData] = useState(dataMinimum);
+const Characteristics: React.FC<CharacteristicsProps> = ({ minimum, recommended }) => {
+    const [currentData, setCurrentData] = useState(minimum);
+    const [activeButton, setActiveButton] = useState<"minimum" | "recommended">("minimum");
+
 
     const buttonMinimum = () => {
-        setCurrentData(dataMinimum);
+        setCurrentData(minimum);
+        setActiveButton("minimum");
     };
-
+    
     const buttonRecommended = () => {
-        setCurrentData(dataRecommended);
+        setCurrentData(recommended);
+        setActiveButton("recommended");
     };
+    
 
     return (
         <div className={styles.characteristics}>
@@ -38,13 +32,16 @@ const Characteristics = () => {
                 <h3 className={styles.characteristics__contaner__title}>System Requirements</h3>
                 <div className={styles.characteristics__contaner__buttons}>
                     <button
-                        className={styles.characteristics__contaner__buttons__buttonOne}
+                        className={`${styles.characteristics__contaner__buttons__buttonOne} ${activeButton === "minimum" ? styles.active : ""
+                            }`}
                         onClick={buttonMinimum}
                     >
                         Minimum
                     </button>
                     <button
-                        className={styles.characteristics__contaner__buttons__buttonTwo}
+                        className={`${styles.characteristics__contaner__buttons__buttonTwo} ${
+                            activeButton === "recommended" ? styles.active : ""
+                        }`}
                         onClick={buttonRecommended}
                     >
                         Recommended
@@ -52,28 +49,70 @@ const Characteristics = () => {
                 </div>
                 <ul className={styles.characteristics__contaner__list}>
                     <li className={styles.characteristics__contaner__list__item}>
-                        <div className={styles.characteristics__contaner__list__item__box}></div>
+                        <div className={styles.characteristics__contaner__list__item__box}>
+                            <Image
+                                className={styles.characteristics__contaner__list__item__box_image}
+                                src="/icons/window.png"
+                                alt="Icon"
+                                fill
+                            />
+                        </div>
                         <p className={styles.characteristics__contaner__list__item__title}>{currentData.os}</p>
                     </li>
                     <li className={styles.characteristics__contaner__list__item}>
-                        <div className={styles.characteristics__contaner__list__item__box}></div>
+                        <div className={styles.characteristics__contaner__list__item__box}>
+                            <Image
+                                className={styles.characteristics__contaner__list__item__box_image}
+                                src="/icons/cpu.png"
+                                alt="Icon"
+                                fill
+                            />
+                        </div>
                         <p className={styles.characteristics__contaner__list__item__title}>{currentData.cpu}</p>
                     </li>
                     <li className={styles.characteristics__contaner__list__item}>
-                        <div className={styles.characteristics__contaner__list__item__box}></div>
-                        <p className={styles.characteristics__contaner__list__item__title}>{currentData.ram}</p>
+                        <div className={styles.characteristics__contaner__list__item__box}>
+                            <Image
+                                className={styles.characteristics__contaner__list__item__box_image}
+                                src="/icons/ram.png"
+                                alt="Icon"
+                                fill
+                            />
+                        </div>
+                        <p className={styles.characteristics__contaner__list__item__title}>{currentData.ram} GB</p>
                     </li>
                     <li className={styles.characteristics__contaner__list__item}>
-                        <div className={styles.characteristics__contaner__list__item__box}></div>
+                        <div className={styles.characteristics__contaner__list__item__box}>
+                            <Image
+                                className={styles.characteristics__contaner__list__item__box_image}
+                                src="/icons/gpu.png"
+                                alt="Icon"
+                                fill
+                            />
+                        </div>
                         <p className={styles.characteristics__contaner__list__item__title}>{currentData.gpu}</p>
                     </li>
                     <li className={styles.characteristics__contaner__list__item}>
-                        <div className={styles.characteristics__contaner__list__item__box}></div>
-                        <p className={styles.characteristics__contaner__list__item__title}>{currentData.disk}</p>
+                        <div className={styles.characteristics__contaner__list__item__box}>
+                            <Image
+                                className={styles.characteristics__contaner__list__item__box_image}
+                                src="/icons/disk.png"
+                                alt="Icon"
+                                fill
+                            />
+                        </div>
+                        <p className={styles.characteristics__contaner__list__item__title}>{currentData.disk} GB</p>
                     </li>
                     <li className={styles.characteristics__contaner__list__item}>
-                        <div className={styles.characteristics__contaner__list__item__box}></div>
-                        <p className={styles.characteristics__contaner__list__item__title}>{currentData.direct}</p>
+                        <div className={styles.characteristics__contaner__list__item__box}>
+                            <Image
+                                className={styles.characteristics__contaner__list__item__box_image}
+                                src="/icons/directx.png"
+                                alt="Icon"
+                                fill
+                            />
+                        </div>
+                        <p className={styles.characteristics__contaner__list__item__title}>{currentData.directx}</p>
                     </li>
                 </ul>
             </div>

@@ -3,16 +3,36 @@
 import styles from "@/components/Slider/Slider.module.scss";
 import { useState, useEffect } from "react";
 
-const Slider = () => {
-    const [positionItemSlider, setPositionItemSlider] = useState(0);
-    const [transitionDuration, setTransitionDuration] = useState('1s'); 
+interface SliderProps {
+    sliderData: sliderData;
+}
 
-    const totalItems = 4; 
-    const itemWidth = 70.8; 
+const StarRating = ({ rating, maxStars = 5 }: { rating: number; maxStars?: number }) => {
+    return (
+        <div className={styles.slider__contaner__list__item__rating__container}>
+            {Array.from({ length: maxStars }).map((_, index) => (
+                <span
+                    key={index}
+                    className={styles.slider__contaner__list__item__rating__container__item}
+                    style={{ color: index < rating ? '#A954FC' : '#A954FC' }}
+                >
+                    {index < rating ? '★' : '☆'}
+                </span>
+            ))}
+        </div>
+    );
+};
+
+const Slider = ({ sliderData }) => {
+    const [positionItemSlider, setPositionItemSlider] = useState(0);
+    const [transitionDuration, setTransitionDuration] = useState('1s');
+
+    const totalItems = 4;
+    const itemWidth = 70.8;
 
     const pageItemOne = () => {
         setPositionItemSlider(0);
-        setTransitionDuration('0.8s');  
+        setTransitionDuration('0.8s');
     };
 
     const pageItemTwo = () => {
@@ -42,9 +62,9 @@ const Slider = () => {
             } else {
                 setPositionItemSlider(nextPosition);
             }
-        }, 6000); 
+        }, 6000);
 
-        return () => clearInterval(interval); 
+        return () => clearInterval(interval);
     }, [positionItemSlider, itemWidth, totalItems]);
 
 
@@ -52,13 +72,9 @@ const Slider = () => {
         <div className={styles.slider}>
             <div className={styles.slider__contaner}>
                 <ul className={styles.slider__contaner__list}>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-50%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -69,13 +85,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-50%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -86,13 +98,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}> 
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-50%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -103,13 +111,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-60%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -120,13 +124,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-60%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -137,13 +137,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-60%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -154,13 +150,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-70%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -171,13 +163,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-70%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -188,13 +176,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-70%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -205,13 +189,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-80%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -222,13 +202,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-80%</h3>
                         <div className={styles.slider__contaner__list__item__data}>
@@ -239,13 +215,9 @@ const Slider = () => {
                             <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
                         </div>
                     </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out`}}>
+                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
                         <div className={styles.slider__contaner__list__item__rating}>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
-                            <span className={styles.slider__contaner__list__item__rating__item}>★</span>
+                            <StarRating rating={4} />
                         </div>
                         <h3 className={styles.slider__contaner__list__item__sell}>-80%</h3>
                         <div className={styles.slider__contaner__list__item__data}>

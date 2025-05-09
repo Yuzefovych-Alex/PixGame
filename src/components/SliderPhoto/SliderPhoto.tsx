@@ -1,6 +1,7 @@
 "use client"; 
 
 import { useState } from "react";
+import Image from "next/image";
 import styles from "@/components/SliderPhoto/SliderPhoto.module.scss";
 
 const SliderPhoto = () => {
@@ -23,11 +24,46 @@ const SliderPhoto = () => {
         <div className={styles.sliderPhoto}>
             <div className={styles.sliderPhoto__contaner}>
                 <ul className={styles.sliderPhoto__contaner__list}>
-                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}></li>
-                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}></li>
-                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}></li>
-                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}></li>
-                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}></li>
+                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}>
+                        <Image 
+                            className={styles.sliderPhoto__contaner__list__item__image}
+                            src="/images/stallker2-1.jpg" 
+                            alt="Icon"
+                            fill
+                        />
+                    </li>
+                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}>
+                        <Image 
+                            className={styles.sliderPhoto__contaner__list__item__image}
+                            src="/images/stallker2-1.jpg" 
+                            alt="Icon"
+                            fill
+                        />
+                    </li>
+                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}>
+                    <Image 
+                            className={styles.sliderPhoto__contaner__list__item__image}
+                            src="/images/stallker2-1.jpg" 
+                            alt="Icon"
+                            fill
+                        />
+                    </li>
+                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}>
+                    <Image 
+                            className={styles.sliderPhoto__contaner__list__item__image}
+                            src="/images/stallker2-1.jpg" 
+                            alt="Icon"
+                            fill
+                        />
+                    </li>
+                    <li className={styles.sliderPhoto__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}px)` }}>
+                         <Image 
+                            className={styles.sliderPhoto__contaner__list__item__image}
+                            src="/images/stallker2-1.jpg" 
+                            alt="Icon"
+                            fill
+                        />
+                    </li>
                 </ul>
                 <div className={styles.sliderPhoto__contaner__buttons}>
                     <button 
