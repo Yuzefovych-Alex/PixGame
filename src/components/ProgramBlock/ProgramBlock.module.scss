@@ -1,34 +1,35 @@
 $color-text: #38214e;
 $color-block-item: #C4C4C4;
 
-.programBlock{
+.programBlock {
     margin-top: 1rem;
-    &__contaner{
+
+    &__contaner {
         display: grid;
         justify-items: center;
 
-        &__list{
+        &__list {
             list-style: none;
             display: flex;
-            
-            &__item{
-               margin: 1rem;
 
-                &__block{
+            &__item {
+                margin: 1rem;
+
+                &__block {
                     color: $color-text;
                     //width: 21.6rem;
-                    width: 20rem;
+                    width: 28.8rem;
                     height: 39rem;
                     background-color: white;
                     border-radius: 2rem;
                     padding: 1rem;
 
-                    &__title{
+                    &__title {
                         margin-top: 1rem;
                         margin-bottom: 1rem;
                         display: flex;
 
-                        &__triangle{
+                        &__triangle {
                             width: 0;
                             height: 0;
                             border-left: 0.3rem solid transparent;
@@ -41,51 +42,54 @@ $color-block-item: #C4C4C4;
                         }
                     }
 
-                    &__list{
+                    &__list {
                         list-style: none;
                         display: grid;
-                        grid-template-columns: repeat(1, 4fr);
+                        grid-template-columns: repeat(2, 8fr); // <-- 1 4fr
                         justify-items: center;
                         margin-bottom: 2rem;
 
-                        &__item{
+                        &__item {
                             margin-top: 0.5rem;
                             margin-bottom: 0.4rem;
                             background-color: $color-text;
-                            width: 16.6rem;
-                            height: 6.6rem; 
+                            //width: 16.6rem;
+                            width: 13rem;
+                            height: 6.6rem;
                             padding: 1rem;
                             display: grid;
                             grid-template-columns: repeat(2, 1fr);
+                            border-radius: 0.5rem;
 
-                            &__blockImage{
+                            &__blockImage {
                                 background-color: $color-block-item;
                                 width: 5rem;
                                 height: 5rem;
                                 border: solid 3px white;
                                 border-radius: 3px;
                             }
-                            
-                            &__data{
-                               color: white;
+
+                            &__data {
+                                color: white;
                             }
 
                         }
                     }
 
-                    &__section{
+                    &__section {
                         height: 3px;
                         width: 100%;
                         background-color: $color-text;
                         border-radius: 20rem;
                     }
 
-                    &__href{
+                    &__href {
                         padding-top: 0.2rem;
                         text-align: center;
 
-                        &__triangle{
-                            
+                        &__triangle {
+                            position: relative;
+                            left: 10px;
                         }
                     }
                 }

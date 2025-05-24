@@ -52,7 +52,6 @@ const MarketProduct = () => {
             <Search/>
             <MultiBox/>
             <BlockProductUser/>
-            
             <Footer/>
         </>
     );

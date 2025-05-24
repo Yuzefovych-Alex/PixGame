@@ -32,17 +32,32 @@ const StarRating = ({ rating, maxStars = 5 }: { rating: number; maxStars?: numbe
 };
 
 const SellPrice = ({ sellPrice }) => {
-    if (sellPrice === 0 || sellPrice === null) {
-        return (<></>);
+    const showPlaceholder = !sellPrice;
+    const style = showPlaceholder
+        ? { backgroundColor: '#38214E', color: '#38214E' } 
+        : { backgroundColor: 'white', color: '#1b1422' };
+
+    return (
+        <div className={styles.cart__item__dataGood__contaner__boxPrice__sell__sell} style={style}>
+            -{sellPrice}%
+        </div>
+    );
+}
+
+const LastPrice = ({ lastPrice }) => {
+    if (lastPrice === 0 || lastPrice === null) {
+        return (
+            <>
+                
+            </>
+        );
     } else {
         return (
-            <div className={styles.cart__item__dataGood__contaner__boxPrice__sell__sell}>
-                -{sellPrice}%
-            </div>
+            <>
+                {lastPrice}
+            </>
         );
     }
-
-
 }
 
 const Carts: React.FC<CartsProps> = ({ numberBlock, type, date, rating, title, price, lastPrice, sellPrice }) => {
@@ -111,13 +126,13 @@ const Carts: React.FC<CartsProps> = ({ numberBlock, type, date, rating, title, p
                     <div className={styles.cart__item__dataGood__contaner__boxPrice}>
 
                         <div className={styles.cart__item__dataGood__contaner__boxPrice__sell}>
-                            <SellPrice sellPrice={1}/>
+                            <SellPrice sellPrice={sellPrice}/>
                         </div>
 
                         <div className={styles.cart__item__dataGood__contaner__boxPrice__box}>
                             <div className={styles.cart__item__dataGood__contaner__boxPrice__box__sell}>
                                 <h2 className={styles.cart__item__dataGood__contaner__boxPrice__box__sell__title}>
-                                    {lastPrice}
+                                    <LastPrice lastPrice={lastPrice}/>
                                 </h2>
                             </div>
                             <div className={styles.cart__item__dataGood__contaner__boxPrice__box__price}>

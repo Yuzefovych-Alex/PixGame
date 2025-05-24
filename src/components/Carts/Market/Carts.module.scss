@@ -131,16 +131,16 @@ $color: #1b1422;
 
                 &__sell {
                     justify-self: start;
-                    position: static; 
+                    position: static;
                     top: auto;
                     right: auto;
 
                     &__sell {
-                        background-color: white;
-                        color: $color;
+                        //background-color: white;
+                        //color: $color;
                         font-size: 1.1rem;
                         font-weight: bold;
-                        padding: 0.6rem 1.2rem;
+                        padding: 0.75rem 1.2rem;
                         border-radius: 0 1.3rem 0 1.3rem;
                         z-index: 10;
                     }
@@ -148,15 +148,14 @@ $color: #1b1422;
 
                 &__box {
                     display: flex;
-                    align-items: center; 
-                    justify-self: end; 
+                    align-items: center;
+                    justify-self: end;
                     margin-right: 1rem;
-                    margin-top: 0.7rem;
 
                     &__sell {
                         display: flex;
-                        align-items: center; 
-                        
+                        align-items: center;
+
                         &__title {
                             color: $color-text;
                             display: block;
