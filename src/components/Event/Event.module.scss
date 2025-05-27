@@ -2,20 +2,21 @@ $color-block: #38214E;
 $color-image: #c4c4c4;
 $color-template: #A954FC;
 
-.event{
+.event {
     margin-top: 2rem;
 
-    &__contaner{
+    &__contaner {
         display: grid;
         justify-items: center;
-        
-        &__title{
+
+        &__title {
             margin-bottom: 1rem;
 
-            &__text{
+            &__text {
                 color: white;
             }
-            &__section{
+
+            &__section {
                 background-color: white;
                 width: 60rem;
                 height: 2px;
@@ -23,46 +24,50 @@ $color-template: #A954FC;
         }
 
 
-        &__list{
+        &__list {
             display: flex;
             list-style: none;
 
-            &__item{
+            &__item {
                 margin-right: 1.2rem;
                 margin-left: 1.2rem;
 
-                &__box{
+                &__box {
                     background-color: $color-block;
                     width: 20.8rem;
                     height: 12.5rem;
                     display: grid;
                     justify-items: center;
 
-                    &__image{
+                    &__image {
                         background-color: $color-image;
-                        height: 12.5rem;
+                        height: 12.4rem;
                         width: 16rem;
                         position: relative;
-                        bottom: 3.3rem;
+                        bottom: 2.7rem;
                     }
-                    
-                    &__new{
+
+                    &__new {
                         color: white;
                         background-color: $color-template;
-                        padding: 1rem;
+                        padding: 0.7rem 1.5rem 0.7rem 2rem;
                         position: relative;
                         left: 40.5%;
                         z-index: 10;
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
                     }
+
+
                 }
             }
         }
 
-        &__buttons{
+        &__buttons {
             display: flex;
-            margin-top: 1rem;;
+            margin-top: 1rem;
+            ;
 
-            &__item{
+            &__item {
                 display: block;
                 width: 0.8rem;
                 height: 0.8rem;

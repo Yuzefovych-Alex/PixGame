@@ -38,7 +38,7 @@ const BlockProductUser: React.FC<BlockProductUserProps> = ({ type, rating, title
             <div className={styles.blockProductUser__contaner__box__contaner__productData}>
               <div className={styles.blockProductUser__contaner__box__contaner__productData__contaner}>
                 <div className={styles.blockProductUser__contaner__box__contaner__productData__contaner__priceData}>
-                  <></>
+                
                 </div>  
                 <div className={styles.blockProductUser__contaner__box__contaner__productData__contaner__description}>
                   🎁 Schedule I + 99 000 ігор в Steam з прогресом та ексклюзивними подарунками 🎁
@@ -48,7 +48,6 @@ const BlockProductUser: React.FC<BlockProductUserProps> = ({ type, rating, title
                 <div className={styles.blockProductUser__contaner__box__contaner__productData__contaner__buy}></div>
                 <div className={styles.blockProductUser__contaner__box__contaner__productData__contaner__guarantor}></div>
                 
-              
               </div>
             </div>
           </div>
