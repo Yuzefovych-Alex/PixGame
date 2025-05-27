@@ -72,9 +72,6 @@ const renderCart = (product: Product) => {
     const typeGame = product.type_game || {};
 
     return (
-
-        ((product.map()))
-
         <Link
             key={product.id}
             href={`/store/product/${product.id}`}
