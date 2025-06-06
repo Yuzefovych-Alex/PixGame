@@ -53,7 +53,7 @@ $color-template: #A954FC;
                         padding: 0.7rem 1.5rem 0.7rem 2rem;
                         position: relative;
                         left: 40.5%;
-                        z-index: 10;
+                        z-index: 5;
                         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
                     }
 
@@ -65,7 +65,7 @@ $color-template: #A954FC;
         &__buttons {
             display: flex;
             margin-top: 1rem;
-            ;
+            
 
             &__item {
                 display: block;
