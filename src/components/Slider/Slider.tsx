@@ -50,9 +50,12 @@ const Slider = ({ sliderData }) => {
         setTransitionDuration('1.2s');
     };
 
-    const isActiveButton = (position) => {
-        return Math.abs(positionItemSlider - position) < 0.1;
+    const convertationDate = (date) => {
+        const date = new Date(date);
+        const pad = num => String(num).padStart(2, '0');
+        return `${pad(date.getDate())}.${pad(date.getMonth() + 1)}.${date.getFullYear()}`;
     };
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -62,7 +65,7 @@ const Slider = ({ sliderData }) => {
             } else {
                 setPositionItemSlider(nextPosition);
             }
-        }, 6000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [positionItemSlider, itemWidth, totalItems]);
@@ -72,162 +75,25 @@ const Slider = ({ sliderData }) => {
         <div className={styles.slider}>
             <div className={styles.slider__contaner}>
                 <ul className={styles.slider__contaner__list}>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-50%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-50%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-50%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-60%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-60%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-60%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-70%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-70%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-70%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-80%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-80%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
-                    <li className={styles.slider__contaner__list__item} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
-                        <div className={styles.slider__contaner__list__item__rating}>
-                            <StarRating rating={4} />
-                        </div>
-                        <h3 className={styles.slider__contaner__list__item__sell}>-80%</h3>
-                        <div className={styles.slider__contaner__list__item__data}>
-                            <div className={styles.slider__contaner__list__item__data__os}>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                                <div className={styles.slider__contaner__list__item__data__os__item}></div>
-                            </div>
-                            <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
-                        </div>
-                    </li>
+                    {sliderData.map((item, index) => (
+                        <>
+                            <li className={styles.slider__contaner__list__item} key={index} style={{ transform: `translateX(${positionItemSlider}rem)`, transition: `transform ${transitionDuration} ease-in-out` }}>
+                                <div className={styles.slider__contaner__list__item__rating}>
+                                    <StarRating rating={4} />
+                                </div>
+                                <h3 className={styles.slider__contaner__list__item__sell}>
+                                    {item.}
+                                    -50%</h3>
+                                <div className={styles.slider__contaner__list__item__data}>
+                                    <div className={styles.slider__contaner__list__item__data__os}>
+                                        <div className={styles.slider__contaner__list__item__data__os__item}></div>
+                                        <div className={styles.slider__contaner__list__item__data__os__item}></div>
+                                    </div>
+                                    <h3 className={styles.slider__contaner__list__item__data__date}>10.02.25</h3>
+                                </div>
+                            </li>
+                        </>
+                    ))}
                 </ul>
                 <div className={styles.slider__contander__buttons}>
                     <ul className={styles.slider__contaner__buttons__list}>

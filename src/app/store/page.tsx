@@ -42,13 +42,14 @@ const StoreHome = () => {
     }
     const onSale = getProductsOnSale(products).slice(0, 12);
     const regular = getProductsNotOnSale(products).slice(0, 12);
+    const cheapest = getCheapestProducts(products);
 
     return (
         <>
             <Header />
             <Search />
             <MultiBox />
-            <Slider />
+            <Slider sliderData={cheapest} />
             <MuiBox numberBlocks={3}>
                 {onSale.map(renderCart)}
             </MuiBox>
@@ -59,6 +60,17 @@ const StoreHome = () => {
             <Footer />
         </>
     );
+};
+
+const getCheapestProducts = (products: Product[]): Product[] => {
+    return products
+        .filter(p => p.price_regions?.[0]) // переконуємось, що є ціна
+        .sort((a, b) => {
+            const priceA = a.price_regions?.[0]?.sell_price ?? a.price_regions?.[0]?.base_price ?? Infinity;
+            const priceB = b.price_regions?.[0]?.sell_price ?? b.price_regions?.[0]?.base_price ?? Infinity;
+            return priceA - priceB;
+        })
+        .slice(0, 12);
 };
 
 const getProductsOnSale = (products: Product[]): Product[] =>
